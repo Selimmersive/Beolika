@@ -4,15 +4,15 @@ export interface ProductDto {
   id: number;
   attributes: {
     name: string;
-    subtitle: string;
     price: number;
     dataUid: string;
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    shortDescription: string;
     url: string;
     slug: string;
+    shortDescription: string;
+    subtitle: string;
     cover: {
       data: {
         id: number;

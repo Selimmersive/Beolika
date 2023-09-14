@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ImUnlocked } from "react-icons/im";
 import { ProductListsDto } from "@/utils/api/dto/productListsDto";
 import { calculateAverageRating } from "@/utils/utils";
-import GetRatings from "src/utils/getRating";
+import GetRatings from "@/utils/getRating";
 
 export default function ProductHeader({ product, productLists }: { product: ProductDto; productLists: ProductListsDto }) {
   const { cover, name, price, subtitle, reviews, shortDescription, categories, url, dataUid } = product.attributes;

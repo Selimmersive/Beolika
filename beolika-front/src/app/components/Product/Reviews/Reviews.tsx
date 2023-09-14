@@ -6,7 +6,7 @@ import { API_URL } from "@/utils/urls";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { useRouter } from "next/navigation";
 import { dateFormat } from "@/utils/utils";
-import GetRatings from "src/utils/getRating";
+import GetRatings from "@/utils/getRating";
 
 export default function Reviews({ data }: { data: ProductDto }) {
   const router = useRouter();

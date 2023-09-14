@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-import GetRatings from "src/utils/getRating";
+import GetRatings from "@/utils/getRating";
 
 export default function Card({
   name,
