@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_lists",
+  "info": {
+    "singularName": "product-list",
+    "pluralName": "product-lists",
+    "displayName": "ProductLists",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lists": {
+      "displayName": "Lists",
+      "type": "component",
+      "repeatable": true,
+      "component": "list.lists"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

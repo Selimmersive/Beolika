@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_faqs",
+  "info": {
+    "singularName": "product-faq",
+    "pluralName": "product-faqs",
+    "displayName": "ProductFAQs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "faqs": {
+      "displayName": "FAQs",
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.faqs"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

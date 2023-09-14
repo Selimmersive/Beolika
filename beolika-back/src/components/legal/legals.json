@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_legal_legals",
+  "info": {
+    "displayName": "Legals",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
