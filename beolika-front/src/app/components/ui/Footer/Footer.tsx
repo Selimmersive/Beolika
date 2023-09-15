@@ -23,12 +23,12 @@ export default function Footer() {
             <h6 className={clsx("text-xl font-bold", "sm:text-2xl", "lg:text-3xl")}>Menu</h6>
             <div className={clsx("flex flex-col space-y-2")}>
               <Links
-                classActive="text-lg uppercase lg:text-[22px] font-bold"
+                classActive="text-lg lg:text-[22px] font-bold"
                 links={[
-                  { href: "/", className: "text-lg uppercase lg:text-[22px] hover:font-bold", title: "Home" },
-                  { href: "/themes", className: "text-lg uppercase lg:text-[22px] hover:font-bold", title: "Themes" },
-                  { href: "/faq", className: "text-lg uppercase lg:text-[22px] hover:font-bold", title: "FAQ" },
-                  { href: "/contact", className: "text-lg uppercase lg:text-[22px] hover:font-bold", title: "Contact" },
+                  { href: "/", className: "text-lg lg:text-[22px] hover:font-bold", title: "Home" },
+                  { href: "/themes", className: "text-lg lg:text-[22px] hover:font-bold", title: "Themes" },
+                  { href: "/faq", className: "text-lg lg:text-[22px] hover:font-bold", title: "FAQ" },
+                  { href: "/contact", className: "text-lg lg:text-[22px] hover:font-bold", title: "Contact" },
                 ]}
               />
             </div>
@@ -37,7 +37,7 @@ export default function Footer() {
             <h6 className={clsx("text-xl font-bold", "sm:text-2xl", "lg:text-3xl")}>Legal pages</h6>
             <div className={clsx("flex flex-col space-y-2")}>
               <Links
-                classActive="text-lg uppercase lg:text-[22px] font-bold"
+                classActive="text-lg lg:text-[22px] font-bold"
                 links={[
                   { href: "/legal/legal-notice", className: "text-lg lg:text-[22px] hover:font-bold", title: "Legal Notice" },
                   { href: "/legal/terms-and-conditions", className: "text-lg lg:text-[22px] hover:font-bold", title: "Terms & Conditions" },
