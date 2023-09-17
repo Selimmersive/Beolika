@@ -1,6 +1,5 @@
 "use client";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { HiOutlineShoppingBag } from "react-icons/hi";
+import { HiOutlineMenuAlt4 , HiOutlineShoppingBag } from "react-icons/hi";
 import Image from "next/image";
 import clsx from "clsx";
 import Links from "../Links";
