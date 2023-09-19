@@ -10,7 +10,7 @@ import { ProductDto } from "@/utils/api/dto/productDto";
 export default async function Home() {
   const shopifyThemes: ProductDto[] = await getProductsByCategory("shopify");
   return (
-    <main>
+    <main>  
       <Suspense fallback={<Loading />}>
         <Header />
         <About />
