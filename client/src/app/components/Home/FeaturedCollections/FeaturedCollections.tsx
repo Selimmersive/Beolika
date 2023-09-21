@@ -5,7 +5,7 @@ import { ProductDto } from "@/utils/api/dto/productDto";
 import { calculateAverageRating } from "@/utils/utils";
 
 export default function FeaturedCollections({ data, title }: { data: ProductDto[]; title: string }) {
-  data.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
+  data?.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
   return (
     <section className="bg-[var(--color-primary)]">
       <div className="container">

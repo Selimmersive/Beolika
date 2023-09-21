@@ -28,7 +28,6 @@ export async function getAllProducts() {
 
 /* HOME PAGE */
 export async function getProductsByCategory(name: string) {
-  const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://127.0.0.1:1337/";
   const query = qs.stringify(
     {
       populate: "*",
