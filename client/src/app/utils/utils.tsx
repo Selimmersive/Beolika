@@ -5,6 +5,7 @@ import { FaqDto } from "./api/dto/faqDto";
 import { ProductDetailsDto } from "./api/dto/productDetailsDto";
 import { ProductDto } from "./api/dto/productDto";
 import { ReviewDto } from "./api/dto/reviewDto";
+import toast from "react-hot-toast";
 
 export const renderOfButtonSelected = (selected: number, product: ProductDto, productDetails: ProductDetailsDto, productFaqs: FaqDto) => {
   switch (selected) {
@@ -19,7 +20,7 @@ export const renderOfButtonSelected = (selected: number, product: ProductDto, pr
   }
 };
 
-export const renderOfError = (errorCode: number) => {
+const renderOfError = (errorCode: number) => {
   switch (errorCode) {
   case 0:
     return "Network error: No Internet connection.";
@@ -66,4 +67,12 @@ export const calculateAverageRating = (reviews: ReviewDto[]) => {
 
   const totalRating = reviews.reduce((acc, review) => acc + review.attributes.rating, 0);
   return totalRating / reviews.length;
+};
+
+export const errorResponse = (err: any) => {
+  if(err.response && err.response.status) {
+    return toast.error(renderOfError(err.response.status));
+  } else {
+    return toast.error(err.message);
+  }
 };

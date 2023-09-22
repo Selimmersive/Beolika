@@ -1,7 +1,5 @@
 import { API_URL } from "../urls";
 import qs from "qs";
-import { renderOfError } from "../utils";
-import toast from "react-hot-toast";
 
 /* COLLECTION PAGE */
 export async function getAllProducts() {
@@ -13,17 +11,13 @@ export async function getAllProducts() {
       encodeValuesOnly: true,
     }
   );
-  try {
-    const res = await fetch(`${API_URL}/api/products?${query}`, {
-      next: { revalidate: 60 },
-    });
 
-    const data = await res.json();
-    return data.data;
-  } catch (error: any) {
-    const errorCode = parseInt(error.message, 10);
-    toast.error(renderOfError(errorCode));
-  }
+  const res = await fetch(`${API_URL}/api/products?${query}`, {
+    next: { revalidate: 60 },
+  });
+
+  const data = await res.json();
+  return data.data;
 }
 
 /* HOME PAGE */
@@ -44,17 +38,12 @@ export async function getProductsByCategory(name: string) {
       encodeValuesOnly: true,
     }
   );
-  try {
-    const res = await fetch(`${API_URL}/api/products?${query}`, {
-      next: { revalidate: 60 },
-    });
+  const res = await fetch(`${API_URL}/api/products?${query}`, {
+    next: { revalidate: 60 },
+  });
 
-    const data = await res.json();
-    return data.data;
-  } catch (error: any) {
-    const errorCode = parseInt(error.message, 10);
-    toast.error(renderOfError(errorCode));
-  }
+  const data = await res.json();
+  return data.data;
 }
 
 /* PRODUCT PAGE */
@@ -64,15 +53,10 @@ export async function getProductBySlug(slug: string) {
     filters: { slug },
   });
 
-  try {
-    const res = await fetch(`${API_URL}/api/products?${params}`, { next: { revalidate: 0 } });
+  const res = await fetch(`${API_URL}/api/products?${params}`, { next: { revalidate: 0 } });
 
-    const data = await res.json();
-    return data.data[0];
-  } catch (error: any) {
-    const errorCode = parseInt(error.message, 10);
-    toast.error(renderOfError(errorCode));
-  }
+  const data = await res.json();
+  return data.data[0];
 }
 
 /* PRODUCT PAGE - DETAILS */
@@ -86,15 +70,10 @@ export async function getProductDetails(name: string) {
     },
   });
 
-  try {
-    const res = await fetch(`${API_URL}/api/product-details?${params}`, { next: { revalidate: 60 } });
+  const res = await fetch(`${API_URL}/api/product-details?${params}`, { next: { revalidate: 60 } });
 
-    const data = await res.json();
-    return data.data[0];
-  } catch (error: any) {
-    const errorCode = parseInt(error.message, 10);
-    toast.error(renderOfError(errorCode));
-  }
+  const data = await res.json();
+  return data.data[0];
 }
 
 export async function getProductFaqs(name: string) {
@@ -107,15 +86,10 @@ export async function getProductFaqs(name: string) {
     },
   });
 
-  try {
-    const res = await fetch(`${API_URL}/api/product-faqs?${params}`, { next: { revalidate: 60 } });
+  const res = await fetch(`${API_URL}/api/product-faqs?${params}`, { next: { revalidate: 60 } });
 
-    const data = await res.json();
-    return data.data[0];
-  } catch (error: any) {
-    const errorCode = parseInt(error.message, 10);
-    toast.error(renderOfError(errorCode));
-  }
+  const data = await res.json();
+  return data.data[0];
 }
 
 export async function getProductLists(name: string) {
@@ -128,15 +102,10 @@ export async function getProductLists(name: string) {
     },
   });
 
-  try {
-    const res = await fetch(`${API_URL}/api/product-lists?${params}`, { next: { revalidate: 60 } });
+  const res = await fetch(`${API_URL}/api/product-lists?${params}`, { next: { revalidate: 60 } });
 
-    const data = await res.json();
-    return data.data[0];
-  } catch (error: any) {
-    const errorCode = parseInt(error.message, 10);
-    toast.error(renderOfError(errorCode));
-  }
+  const data = await res.json();
+  return data.data[0];
 }
 
 /* LEGAL PAGE */
@@ -146,13 +115,8 @@ export async function getLegalPageBySlug(slug: string) {
     filters: { slug },
   });
 
-  try {
-    const res = await fetch(`${API_URL}/api/legals?${params}`, { next: { revalidate: 60 } });
+  const res = await fetch(`${API_URL}/api/legals?${params}`, { next: { revalidate: 60 } });
 
-    const data = await res.json();
-    return data.data[0];
-  } catch (error: any) {
-    const errorCode = parseInt(error.message, 10);
-    toast.error(renderOfError(errorCode));
-  }
+  const data = await res.json();
+  return data.data[0];
 }

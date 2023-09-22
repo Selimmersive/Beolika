@@ -5,9 +5,12 @@ import Collections from "@/components/Collections";
 import NavBar from "@/components/ui/NavBar";
 import { getAllProducts } from "@/utils/api/api";
 import { ProductDto } from "@/utils/api/dto/productDto";
+import { errorResponse } from "@/utils/utils";
 
 export default async function AllCollections() {
-  const allProducts: ProductDto[] = await getAllProducts();
+  const allProducts: ProductDto[] = await getAllProducts().catch((err) => {
+    errorResponse(err);
+  });
 
   return (
     <main>

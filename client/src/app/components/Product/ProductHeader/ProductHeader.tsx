@@ -78,7 +78,7 @@ export default function ProductHeader({ product, productLists }: { product: Prod
                   data-item-id={product.id}
                   data-item-name={name}
                   data-item-price={price}
-                  data-item-image={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${cover.data.attributes.formats.thumbnail.url}`}
+                  data-item-image={`${API_URL}${cover.data.attributes.formats.thumbnail.url}`}
                   data-item-url={`/themes/${name}`}
                   data-item-file-guid={dataUid}>
                   Add to card

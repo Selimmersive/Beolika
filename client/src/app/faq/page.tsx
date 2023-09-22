@@ -6,9 +6,12 @@ import NavBar from "@/components/ui/NavBar";
 import clsx from "clsx";
 import FAQ from "@/components/ui/FAQ";
 import Loading from "../loading";
+import { errorResponse } from "@/utils/utils";
 
 export default async function FaqPages() {
-  const faq: FaqDto = await getProductFaqs("shopify");
+  const faq: FaqDto = await getProductFaqs("shopify").catch((err) => {
+    errorResponse(err);
+  });
   return (
     <main>
       <div className="container">

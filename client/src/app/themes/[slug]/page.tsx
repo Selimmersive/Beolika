@@ -9,14 +9,25 @@ import ProductHeader from "@/components/Product/ProductHeader";
 import Suggestion from "@/components/Product/Suggestion";
 import Loading from "./loading";
 import Footer from "@/components/ui/Footer";
+import { errorResponse } from "@/utils/utils";
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
-  const product: ProductDto = await getProductBySlug(params.slug);
+  const product: ProductDto = await getProductBySlug(params.slug).catch((err) => {
+    errorResponse(err);
+  });
   const categoryName = product.attributes.categories.data[0].attributes.name;
-  const productLists: ProductListsDto = await getProductLists(product ? categoryName : "");
-  const productDetails: ProductDetailsDto = await getProductDetails(product ? categoryName : "");
-  const productFaqs: FaqDto = await getProductFaqs(product ? categoryName : "");
-  const productSuggest: ProductDto[] = await getProductsByCategory(product ? categoryName : "");
+  const productLists: ProductListsDto = await getProductLists(product ? categoryName : "").catch((err) => {
+    errorResponse(err);
+  });
+  const productDetails: ProductDetailsDto = await getProductDetails(product ? categoryName : "").catch((err) => {
+    errorResponse(err);
+  });
+  const productFaqs: FaqDto = await getProductFaqs(product ? categoryName : "").catch((err) => {
+    errorResponse(err);
+  });
+  const productSuggest: ProductDto[] = await getProductsByCategory(product ? categoryName : "").catch((err) => {
+    errorResponse(err);
+  });
 
   return (
     <main>

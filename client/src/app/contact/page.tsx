@@ -2,7 +2,7 @@ import Footer from "@/components/ui/Footer";
 import NavBar from "@/components/ui/NavBar";
 import clsx from "clsx";
 
-export default async function ContactPage() {
+export default function ContactPage() {
   return (
     <main>
       <div className="container">
@@ -16,6 +16,7 @@ export default async function ContactPage() {
               and offer personalized assistance at every stage of your shopping experience. Your satisfaction and happiness are our top priority.
             </p>
             <button
+              onClick={() => window.location.href = 'mailto:hello@beolika.com'}
               type="button"
               className={clsx(
                 "w-full bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105",

@@ -28,8 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://cdn.snipcart.com" />
       </Head>
       <body className="min-w-screen bg-[var(--color-primary)]" suppressHydrationWarning={true}>
-        <Toaster position="bottom-center" reverseOrder={false} />
         {children}
+        <Toaster position="bottom-center" reverseOrder={false} />
         <Script
           async
           src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"
