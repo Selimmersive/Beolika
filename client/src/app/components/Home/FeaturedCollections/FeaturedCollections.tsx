@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Card from "@/components/ui/Card/Card";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { calculateAverageRating } from "@/utils/utils";
-import { API_URL } from "@/utils/urls";
 
 export default function FeaturedCollections({ data, title }: { data: ProductDto[]; title: string }) {
   data?.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
@@ -22,7 +21,7 @@ export default function FeaturedCollections({ data, title }: { data: ProductDto[
                   price={`${theme.attributes.price} €`}
                   imgSrc={`${
                     theme.attributes.cover
-                      ? `${API_URL}${theme.attributes.cover.data.attributes.formats.large.url}`
+                      ? `${theme.attributes.cover.data.attributes.formats.large.url}`
                       : ""
                   }`}
                   imgAlt={

@@ -1,7 +1,6 @@
 "use client";
 import Card from "@/components/ui/Card/Card";
 import { ProductDto } from "@/utils/api/dto/productDto";
-import { API_URL } from "@/utils/urls";
 import { calculateAverageRating } from "@/utils/utils";
 import clsx from "clsx";
 
@@ -26,7 +25,7 @@ export default function Collections({ data }: { data: ProductDto[] }) {
                   price={`${theme.attributes.price} €`}
                   imgSrc={`${
                     theme.attributes.cover
-                      ? `${API_URL}${theme.attributes.cover.data.attributes.formats.large.url}`
+                      ? `${theme.attributes.cover.data.attributes.formats.large.url}`
                       : ""
                   }`}
                   imgAlt={

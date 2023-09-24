@@ -7,7 +7,6 @@ import { ImUnlocked } from "react-icons/im";
 import { ProductListsDto } from "@/utils/api/dto/productListsDto";
 import { calculateAverageRating } from "@/utils/utils";
 import GetRatings from "@/utils/getRating";
-import { API_URL } from "@/utils/urls";
 
 export default function ProductHeader({ product, productLists }: { product: ProductDto; productLists: ProductListsDto }) {
   const { cover, name, price, subtitle, reviews, shortDescription, categories, url, dataUid } = product.attributes;
@@ -27,7 +26,7 @@ export default function ProductHeader({ product, productLists }: { product: Prod
           )}>
           <div className="w-full lg:sticky lg:top-7">
             <Image
-              src={`${product.attributes ? `${API_URL}${cover.data.attributes.formats.large.url}` : ""}`}
+              src={`${product.attributes ? `${cover.data.attributes.formats.large.url}` : ""}`}
               alt={cover.data.attributes ? cover.data.attributes.alternativeText : "Images of the theme"}
               className="rounded-xl bg-cover shadow-xl"
               width={cover.data.attributes.formats.large.width}
@@ -78,7 +77,7 @@ export default function ProductHeader({ product, productLists }: { product: Prod
                   data-item-id={product.id}
                   data-item-name={name}
                   data-item-price={price}
-                  data-item-image={`${API_URL}${cover.data.attributes.formats.thumbnail.url}`}
+                  data-item-image={`${cover.data.attributes.formats.thumbnail.url}`}
                   data-item-url={`/themes/${name}`}
                   data-item-file-guid={dataUid}>
                   Add to card
