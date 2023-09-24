@@ -26,7 +26,7 @@ export default function ProductHeader({ product, productLists }: { product: Prod
           )}>
           <div className="w-full lg:sticky lg:top-7">
             <Image
-              src={`${product.attributes ? `${cover.data.attributes.formats.large.url}` : ""}`}
+              src={`${product.attributes ? cover.data.attributes.formats.large.url : ""}`}
               alt={cover.data.attributes ? cover.data.attributes.alternativeText : "Images of the theme"}
               className="rounded-xl bg-cover shadow-xl"
               width={cover.data.attributes.formats.large.width}

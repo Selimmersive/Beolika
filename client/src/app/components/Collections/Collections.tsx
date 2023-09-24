@@ -25,7 +25,7 @@ export default function Collections({ data }: { data: ProductDto[] }) {
                   price={`${theme.attributes.price} €`}
                   imgSrc={`${
                     theme.attributes.cover
-                      ? `${theme.attributes.cover.data.attributes.formats.large.url}`
+                      ? theme.attributes.cover.data.attributes.formats.large.url
                       : ""
                   }`}
                   imgAlt={

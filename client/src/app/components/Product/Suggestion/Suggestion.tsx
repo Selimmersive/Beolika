@@ -1,6 +1,5 @@
 import Card from "@/components/ui/Card";
 import { ProductDto } from "@/utils/api/dto/productDto";
-import { API_URL } from "@/utils/urls";
 import { calculateAverageRating } from "@/utils/utils";
 import clsx from "clsx";
 
@@ -36,7 +35,7 @@ export default function Suggestion({ productSuggest }: { productSuggest: Product
                 category="shopify"
                 price={`${theme.attributes.price} €`}
                 imgSrc={`${
-                  theme.attributes.cover ? `${API_URL}${theme.attributes.cover.data.attributes.formats.large.url}` : ""
+                  theme.attributes.cover ? theme.attributes.cover.data.attributes.formats.large.url : ""
                 }`}
                 imgAlt={
                   theme.attributes.cover.data.attributes.alternativeText
