@@ -76,3 +76,22 @@ export const errorResponse = (err: any) => {
     return toast.error(err.message);
   }
 };
+
+export const getRandomProducts = (productByCategory: ProductDto[], slug: string) => {
+  const filteredProducts = productByCategory.filter((p) => p.attributes.slug !== slug);
+  const randomProducts: ProductDto[] = [];
+  const productIndices: number[] = [];
+
+  while (productIndices.length < 3) {
+    const randomIndex = Math.floor(Math.random() * filteredProducts.length);
+    if (!productIndices.includes(randomIndex)) {
+      productIndices.push(randomIndex);
+    }
+  }
+
+  for (const index of productIndices) {
+    randomProducts.push(filteredProducts[index]);
+  }
+
+  return randomProducts;
+};

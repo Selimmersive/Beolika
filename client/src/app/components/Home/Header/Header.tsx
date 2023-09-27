@@ -117,7 +117,7 @@ export default function Header() {
       <div className={clsx("textRightToLeft h-14 border-b-2 border-t-2 font-sego uppercase text-white shadow-md")}>
         <div>
           <span>
-            <div className="flex items-end">
+            <div className="flex items-center">
               high-converting <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
               trend <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
               creative <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />

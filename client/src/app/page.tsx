@@ -14,9 +14,9 @@ export default async function Home() {
   });
   return (
     <main>  
+      <Header />
+      <About />
       <Suspense fallback={<Loading />}>
-        <Header />
-        <About />
         <FeaturedCollections data={shopifyThemes} title="Shopify themes" />
         <Footer />
       </Suspense>

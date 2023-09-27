@@ -9,7 +9,7 @@ import ProductHeader from "@/components/Product/ProductHeader";
 import Suggestion from "@/components/Product/Suggestion";
 import Loading from "./loading";
 import Footer from "@/components/ui/Footer";
-import { errorResponse } from "@/utils/utils";
+import { errorResponse, getRandomProducts } from "@/utils/utils";
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
   const product: ProductDto = await getProductBySlug(params.slug).catch((err) => {
@@ -25,16 +25,18 @@ export default async function ProductPage({ params }: { params: { slug: string }
   const productFaqs: FaqDto = await getProductFaqs(product ? categoryName : "").catch((err) => {
     errorResponse(err);
   });
-  const productSuggest: ProductDto[] = await getProductsByCategory(product ? categoryName : "").catch((err) => {
+  const productByCategory: ProductDto[] = await getProductsByCategory(product ? categoryName : "").catch((err) => {
     errorResponse(err);
   });
+
+  const suggestedProducts = getRandomProducts(productByCategory, params.slug).slice(0, 3);
 
   return (
     <main>
       <Suspense fallback={<Loading />}>
         <ProductHeader product={product} productLists={productLists} />
         <ProductDetails product={product} productDetails={productDetails} productFaqs={productFaqs} />
-        {productSuggest.length > 1 && <Suggestion productSuggest={productSuggest} />}
+        {productByCategory.length > 2 && <Suggestion productSuggest={suggestedProducts} />}
         <Footer />
       </Suspense>
     </main>

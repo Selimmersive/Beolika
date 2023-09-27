@@ -24,9 +24,9 @@ export default function Collections({ data }: { data: ProductDto[] }) {
                   category={theme.attributes.categories.data[0].attributes.name}
                   price={`${theme.attributes.price} €`}
                   imgSrc={`${
-                    theme.attributes.cover
-                      ? theme.attributes.cover.data.attributes.formats.large.url
-                      : ""
+                    process.env.NODE_ENV === "development"
+                      ? `http://127.0.0.1:1337${theme.attributes.cover.data.attributes.formats.large.url}`
+                      : `${theme.attributes.cover.data.attributes.formats.large.url}`
                   }`}
                   imgAlt={
                     theme.attributes.cover.data.attributes.alternativeText

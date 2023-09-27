@@ -3,13 +3,16 @@ import { HiOutlineMenuAlt4 , HiOutlineShoppingBag } from "react-icons/hi";
 import Image from "next/image";
 import clsx from "clsx";
 import Links from "../Links";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
     <nav>
       <div className={clsx("flex w-full items-center justify-between", "lg:hidden")}>
         <HiOutlineMenuAlt4 className={clsx("text-2xl", "md:text-3xl", "lg:text-4xl")} />
-        <Image alt="" src="/images/Beolika-Logo.png" width={80} height={80} />
+        <Link href="/">
+          <Image alt="" src="/images/Beolika-Logo.png" width={80} height={80} />
+        </Link>
         <div className="flex gap-2">
           <HiOutlineShoppingBag
             className={clsx("header__summary snipcart-checkout snipcart-summary cursor-pointer text-2xl", "md:text-3xl", "lg:text-4xl")}
@@ -20,10 +23,10 @@ export default function NavBar() {
       </div>
       <div className={clsx("hidden", "lg:flex lg:w-full lg:items-center lg:justify-between")}>
         <div className="flex items-center space-x-14">
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image alt="" src="/images/Beolika-Logo.png" width={70} height={70} />
             <h1 className="font-bold md:-ml-1 md:text-2xl md:tracking-[5px]">EOLIKA</h1>
-          </div>
+          </Link>
           <div className={clsx("flex space-x-14 text-lg uppercase", "lg:pt-2 lg:text-xl")}>
             <Links
               classActive="border-b-[3px] font-semibold"

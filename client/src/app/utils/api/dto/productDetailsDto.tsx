@@ -1,3 +1,5 @@
+import { CategoryDto } from "./categoryDto";
+
 export interface ProductDetailsDto {
     id: number;
     attributes: {
@@ -10,15 +12,7 @@ export interface ProductDetailsDto {
         content: string;
       }[];
       category: {
-        data: {
-          id: number;
-          attributes: {
-            name: string;
-            createdAt: string;
-            updatedAt: string;
-            publishedAt: string;
-          };
-        };
+        data: CategoryDto;
       };
     };
   }

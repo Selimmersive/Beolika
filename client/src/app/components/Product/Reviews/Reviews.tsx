@@ -189,7 +189,7 @@ export default function Reviews({ data }: { data: ProductDto }) {
           </div>
         ))
       ) : (
-        <div className={clsx("flex justify-center py-2 text-lg", "md:text-xl", "lg:py-20 lg:text-[22px]", "2xl:text-2xl")}>
+        <div className={clsx("flex justify-center py-8 text-lg", "md:text-xl", "lg:py-20 lg:text-[22px]", "2xl:text-2xl")}>
           No reviews at the moment
         </div>
       )}

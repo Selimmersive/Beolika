@@ -1,3 +1,4 @@
+import { CategoryDto } from "./categoryDto";
 import { ReviewDto } from "./reviewDto";
 
 export interface ProductDto {
@@ -90,15 +91,7 @@ export interface ProductDto {
       data: ReviewDto[];
     };
     categories: {
-      data: {
-        id: number;
-        attributes: {
-          name: string;
-          createdAt: string;
-          updatedAt: string;
-          publishedAt: string;
-        };
-      }[];
+      data: CategoryDto[];
     };
   };
 }

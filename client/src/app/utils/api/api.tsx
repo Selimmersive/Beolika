@@ -25,9 +25,6 @@ export async function getProductsByCategory(name: string) {
   const query = qs.stringify(
     {
       populate: "*",
-      pagination: {
-        limit: 3,
-      },
       filters: {
         categories: {
           name,
