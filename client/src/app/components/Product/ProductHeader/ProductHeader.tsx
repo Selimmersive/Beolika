@@ -10,7 +10,7 @@ import GetRatings from "@/utils/getRating";
 import { API_URL } from "@/utils/urls";
 
 export default function ProductHeader({ product, productLists }: { product: ProductDto; productLists: ProductListsDto }) {
-  const { cover, name, price, subtitle, reviews, shortDescription, categories, url, dataUid, itemId } = product.attributes;
+  const { cover, name, price, subtitle, reviews, shortDescription, categories, url, dataUid } = product.attributes;
   const { lists } = productLists.attributes;
 
   const averageRating = calculateAverageRating(reviews.data);
@@ -76,8 +76,8 @@ export default function ProductHeader({ product, productLists }: { product: Prod
                 </button>
                 <button
                   className="snipcart-add-item w-full bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105"
-                  data-item-id={itemId}
-                  itemID={itemId}
+                  data-item-id={dataUid}
+                  itemID={dataUid}
                   data-item-name={name}
                   data-item-price={price}
                   data-item-image={process.env.NODE_ENV === "development"
