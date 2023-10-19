@@ -77,6 +77,7 @@ export default function ProductHeader({ product, productLists }: { product: Prod
                 <button
                   className="snipcart-add-item w-full bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105"
                   data-item-id={itemId}
+                  itemID={itemId}
                   data-item-name={name}
                   data-item-price={price}
                   data-item-image={process.env.NODE_ENV === "development"

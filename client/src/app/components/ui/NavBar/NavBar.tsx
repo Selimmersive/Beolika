@@ -3,28 +3,11 @@ import { HiOutlineMenuAlt4 , HiOutlineShoppingBag } from "react-icons/hi";
 import clsx from "clsx";
 import Links from "../Links";
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../Modal";
 
 export default function NavBar() {
   const [isModal, setIsModal] = useState(false);
-  const [width, setWidth] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (ref?.current) {
-        setWidth(ref.current.clientWidth);
-      }
-    };
-
-    handleResize(); // Initial measurement
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     if (isModal) {
@@ -39,10 +22,10 @@ export default function NavBar() {
   }, [isModal]);
 
   return (
-    <nav className={clsx("py-6", "md:py-14", "lg:py-6")} ref={ref}>
+    <nav className={clsx("py-6", "md:py-14", "lg:py-6")}>
       <div className={clsx("space-y-4", "md:space-y-6", "lg:hidden")}>
         <Link href="/">
-          <h3 className={clsx("font-glacialRegular text-center -mt-10 -mb-7", "md:text-left")} style={{fontSize: width <  500 ? width / 3 : "36px"}}>Beolika</h3>
+          <h3 className={clsx("font-glacialRegular text-4xl")}>Beolika</h3>
         </Link>
         <div className="border-b"></div>
         <div className={clsx("flex w-full items-center justify-between")}>
