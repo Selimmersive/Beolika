@@ -42,7 +42,7 @@ export default function NavBar() {
     <nav className={clsx("py-6", "md:py-14", "lg:py-6")} ref={ref}>
       <div className={clsx("space-y-4", "md:space-y-6", "lg:hidden")}>
         <Link href="/">
-          <h3 className={clsx("font-glacialRegular text-center -mt-10 -mb-5", "md:text-left")} style={{fontSize: width <  500 ? width / 3 : "36px"}}>Beolika</h3>
+          <h3 className={clsx("font-glacialRegular text-center -mt-10 -mb-7", "md:text-left")} style={{fontSize: width <  500 ? width / 3 : "36px"}}>Beolika</h3>
         </Link>
         <div className="border-b"></div>
         <div className={clsx("flex w-full items-center justify-between")}>

@@ -9,77 +9,51 @@ export default function Loading() {
       <SkeletonNavBar />
       <div
         className={clsx(
-          "h-[760px] space-y-4",
+          "h-80 space-y-4",
           "sm:space-y-6",
-          "md:h-screen",
-          "lg:flex lg:h-[700px] lg:flex-col lg:justify-center",
-          "xl:h-[800px]"
+          "md:h-[450px]",
+          "lg:flex lg:h-[500px] lg:flex-col lg:justify-center",
+          "xl:h-[550px]"
         )}>
-        <div className={clsx("flex flex-col", "lg:flex-row-reverse lg:items-center lg:justify-between")}>
-          <div className={clsx("relative flex items-center justify-center")}>
-            <div
-              className={clsx(
-                "absolute z-0 mx-auto mr-7 mt-10 h-[377px] w-[255px] rounded-full border-2 border-white",
-                "lg:mr-14 lg:h-[500px] lg:w-[300px]",
-                "xl:h-[600px] xl:w-[400px]"
-              )}
-            />
-            <div className={clsx("z-10 mx-auto mt-10 h-[377px] w-[255px] rounded-full", "lg:h-[500px] lg:w-[300px]", "xl:h-[600px] xl:w-[400px]")}>
-              <div className={clsx("rounded-full shadow-xl flex items-center justify-center w-full h-[375px] bg-gray-300", "xs:h-72", "sm:h-80", "lg:h-[400px]", "xl:h-[700px]", "2xl:h-[800px]")}>
-                <BsFillImageFill className={clsx("text-4xl text-gray-400")} />
-              </div>
+        <div className={clsx("flex flex-col h-full", "lg:flex-row-reverse lg:items-center lg:justify-between")}>
+          <div />
+          <div className={clsx("space-y-4 h-full flex flex-col justify-end pb-5", "sm:space-y-6", "lg:w-full lg:flex-row lg:justify-between lg:items-end lg:pb-20")}>
+            <div className="mb-4 space-y-4">
+              <div className={clsx("w-[95%] h-3 rounded-full bg-gray-200", "lg:w-96")} />
+              <div className={clsx("w-[75%] h-2 rounded-full bg-gray-200", "lg:w-80")} />
             </div>
-          </div>
-          <div className={clsx("space-y-6", "sm:space-y-6")}>
-            <div
-              className={clsx(`pt-14 font-sego uppercase leading-[30px]`, "md:leading-[60px]", "lg:pt-0 lg:leading-[45px]", "xl:leading-[70px]")}
-            />
-            <div className={clsx("w-full space-y-4", "sm:space-y-6")}>
-              <div className={clsx("flex items-end space-x-4", "xl:space-x-8")}>
-                <div
-                  className={clsx(
-                    "font-sego uppercase leading-[30px]",
-                    "sm:leading-[35px]",
-                    "md:leading-[60px]",
-                    "lg:leading-[55px]",
-                    "xl:leading-[70px]"
-                  )}
-                />
-                <div className={clsx("flex h-7 w-full items-center justify-end rounded-full border-2", "sm:h-8", "md:h-12", "lg:h-10", "xl:h-14")}>
-                </div>
-              </div>
-              <div className={clsx("flex items-end space-x-4", "xl:space-x-8")}>
-                <div
-                  className={clsx(
-                    "flex h-7 w-28 items-center justify-center rounded-full border-2",
-                    "xs:w-32",
-                    "sm:h-8 sm:w-36",
-                    "md:h-12 md:w-64",
-                    "lg:h-10 lg:w-44",
-                    "xl:h-14 xl:w-60"
-                  )}>
-                  <div className="flex h-[90%] w-[98%] items-center justify-center rounded-full bg-white">
-                    {/* <Image alt="" src={Shape} className={clsx("h-[30px] w-[30px]", "md:h-14 md:w-14", "lg:h-[40px] lg:w-[40px]")} /> */}
-                  </div>
-                </div>
-                <div
-                  className={clsx(
-                    "font-sego uppercase leading-[30px]",
-                    "sm:leading-[35px]",
-                    "md:leading-[60px]",
-                    "lg:leading-[55px]",
-                    "xl:leading-[70px]"
-                  )}
-                />
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className={clsx("w-[95%] h-2 rounded-full bg-gray-200")} />
-              <div className={clsx("w-[95%] h-2 rounded-full bg-gray-200")} />
-              <div className={clsx("w-[75%] h-2 rounded-full bg-gray-200")} />
+            <div className={clsx("lg:flex lg:flex-col lg:space-y-4")}>
+              <div className={clsx("w-[95%] h-1.5 rounded-full bg-gray-200", "lg:w-44")} />
+              <div className={clsx("w-[90%] h-1.5 rounded-full bg-gray-200", "lg:w-44")} />
+              <div className={clsx("w-[35%] h-1.5 rounded-full bg-gray-200", "lg:w-32")} />
             </div>
           </div>
         </div>
+      </div>
+      <section className="w-full bg-[var(--color-primary)]">
+        <div className="space-y-4 py-10">
+          <div className={clsx("md:flex md:justify-between md:items-center md:w-full")}>
+            <div className={clsx("w-[35%] h-1.5 rounded-full bg-gray-200 hidden", "md:block md:w-24")} />
+            <div className={clsx("w-[35%] h-1.5 rounded-full bg-gray-200", "md:w-24")} />
+          </div>
+          <div className="flex w-full flex-col items-center justify-center gap-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:justify-items-center">
+            <div className={clsx("rounded-xl shadow-xl flex items-center justify-center w-full h-64 bg-gray-300", "xs:h-72", "sm:h-80", "lg:h-[250px]", "xl:h-[350px]", "2xl:h-[400px]")}>
+              <BsFillImageFill className={clsx("text-4xl text-gray-400")} />
+            </div>
+            <div className={clsx("rounded-xl shadow-xl flex items-center justify-center w-full h-64 bg-gray-300", "xs:h-72", "sm:h-80", "lg:h-[250px]", "xl:h-[350px]", "2xl:h-[400px]")}>
+              <BsFillImageFill className={clsx("text-4xl text-gray-400")} />
+            </div>
+            <div className={clsx("rounded-xl shadow-xl flex items-center justify-center w-full h-64 bg-gray-300", "xs:h-72", "sm:h-80", "lg:h-[250px]", "xl:h-[350px]", "2xl:h-[400px]")}>
+              <BsFillImageFill className={clsx("text-4xl text-gray-400")} />
+            </div>
+          </div>
+          <div className={clsx("w-[35%] h-1.5 rounded-full bg-gray-200", "md:hidden")} />
+        </div>
+      </section>
+      <div className={clsx("space-y-4 py-14", "xl:py-24")}>
+        <div className={clsx("w-[95%] h-1.5 rounded-full bg-gray-200")} />
+        <div className={clsx("w-[90%] h-1.5 rounded-full bg-gray-200")} />
+        <div className={clsx("w-[35%] h-1.5 rounded-full bg-gray-200")} />
       </div>
       <SkeletonFooter />
     </div>

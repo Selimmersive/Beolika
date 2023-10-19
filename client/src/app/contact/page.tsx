@@ -23,7 +23,7 @@ export default function ContactPage() {
                 href="mailto:hello@beolika.com"
                 type="button"
                 className={clsx(
-                  "w-full bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105",
+                  "w-60 bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105",
                   "lg:w-[250px]"
                 )}>
               Contact

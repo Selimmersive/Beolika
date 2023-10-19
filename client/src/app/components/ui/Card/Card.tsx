@@ -31,11 +31,11 @@ export default function Card({
       </div>
       <div className="my-4 pb-2">
         <div className="flex items-center justify-between">
-          <h5 className="text-lg font-glacialRegular md:text-xl">{name}</h5>
-          <p className="text-lg font-glacialRegular md:text-xl">{price}</p>
+          <h5 className="text-xl font-glacialRegular md:text-xl">{name}</h5>
+          <p className="text-xl font-glacialRegular md:text-xl">{price}</p>
         </div>
         <div className="flex items-center justify-between pt-1">
-          <p className="text-lg font-semibold uppercase md:text-xl">{category}</p>
+          <p className="text-xl font-semibold uppercase md:text-xl">{category}</p>
           <GetRatings value={ratings} className="text-lg" />
         </div>
       </div>
