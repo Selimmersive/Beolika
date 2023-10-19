@@ -10,13 +10,12 @@ import GetRatings from "@/utils/getRating";
 import { API_URL } from "@/utils/urls";
 
 export default function ProductHeader({ product, productLists }: { product: ProductDto; productLists: ProductListsDto }) {
-  const { cover, name, price, subtitle, reviews, shortDescription, categories, url, dataUid } = product.attributes;
+  const { cover, name, price, subtitle, reviews, shortDescription, categories, url, dataUid, itemId } = product.attributes;
   const { lists } = productLists.attributes;
 
   const averageRating = calculateAverageRating(reviews.data);
-
   return (
-    <header className="bg-image border-b">
+    <header className="border-b">
       <div className="container font-darker">
         <NavBar />
         <div
@@ -40,9 +39,9 @@ export default function ProductHeader({ product, productLists }: { product: Prod
             <div className={clsx("space-y-4", "lg:space-y-6")}>
               <div className={clsx("space-y-2")}>
                 <div className="flex items-center justify-between">
-                  <h3 className={clsx("font-sego text-3xl font-bold uppercase", "sm:text-4xl", "lg:text-4xl", "2xl:text-5xl")}>{name}</h3>
+                  <h3 className={clsx("font-glacialBold text-3xl", "sm:text-4xl", "lg:text-4xl", "2xl:text-5xl")}>{name}</h3>
                   <div className="flex items-center gap-2">
-                    <h2 className={clsx("text-3xl font-bold", "lg:text-4xl", "2xl:text-5xl")}>{price} €</h2>
+                    <h2 className={clsx("text-3xl font-glacialBold", "lg:text-3xl", "2xl:text-4xl")}>{price} €</h2>
                   </div>
                 </div>
                 <h3 className={clsx("text-md font-light uppercase", "lg:text-xl", "2xl:text-2xl")}>{subtitle}</h3>
@@ -77,7 +76,7 @@ export default function ProductHeader({ product, productLists }: { product: Prod
                 </button>
                 <button
                   className="snipcart-add-item w-full bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105"
-                  data-item-id={product.id}
+                  data-item-id={itemId}
                   data-item-name={name}
                   data-item-price={price}
                   data-item-image={process.env.NODE_ENV === "development"

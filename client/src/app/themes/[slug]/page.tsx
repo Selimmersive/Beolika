@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { getProductBySlug, getProductDetails, getProductFaqs, getProductLists, getProductsByCategory } from "@/utils/api/api";
+import { errorResponse, getRandomProducts } from "@/utils/utils";
 import { ProductDetailsDto } from "@/utils/api/dto/productDetailsDto";
 import { ProductListsDto } from "@/utils/api/dto/productListsDto";
 import { ProductDto } from "@/utils/api/dto/productDto";
@@ -7,9 +8,8 @@ import { FaqDto } from "@/utils/api/dto/faqDto";
 import ProductDetails from "@/components/Product/ProductDetails";
 import ProductHeader from "@/components/Product/ProductHeader";
 import Suggestion from "@/components/Product/Suggestion";
-import Loading from "./loading";
 import Footer from "@/components/ui/Footer";
-import { errorResponse, getRandomProducts } from "@/utils/utils";
+import Loading from "./loading";
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
   const product: ProductDto = await getProductBySlug(params.slug).catch((err) => {
@@ -33,7 +33,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
   return (
     <main>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />} >
         <ProductHeader product={product} productLists={productLists} />
         <ProductDetails product={product} productDetails={productDetails} productFaqs={productFaqs} />
         {productByCategory.length > 2 && <Suggestion productSuggest={suggestedProducts} />}

@@ -6,7 +6,6 @@ import FeaturedCollections from "@/components/Home/FeaturedCollections";
 import Loading from "./loading";
 import Header from "@/components/Home/Header";
 import Footer from "@/components/ui/Footer";
-import About from "@/components/Home/About";
 
 export default async function Home() {
   const shopifyThemes: ProductDto[] = await getProductsByCategory("shopify").catch((err) => {
@@ -15,9 +14,8 @@ export default async function Home() {
   return (
     <main>  
       <Header />
-      <About />
       <Suspense fallback={<Loading />}>
-        <FeaturedCollections data={shopifyThemes} title="Shopify themes" />
+        <FeaturedCollections data={shopifyThemes} title="Products" />
         <Footer />
       </Suspense>
     </main>

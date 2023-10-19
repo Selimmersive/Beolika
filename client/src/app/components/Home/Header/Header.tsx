@@ -1,11 +1,7 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import NavBar from "@/components/ui/NavBar";
 import clsx from "clsx";
-import Woman from "@/images/woman.png";
-import Shape from "@/images/shape-b.png";
-import ShapeIcon from "@/images/shape-w.png";
-import Image from "next/image";
 
 export default function Header() {
   const [width, setWidth] = useState(0);
@@ -27,20 +23,20 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-image text-white">
+    <header className="text-white" ref={ref}>
       <div className="container">
         <NavBar />
         <div
           className={clsx(
-            "h-[760px] space-y-4",
+            "h-80 space-y-4",
             "sm:space-y-6",
-            "md:h-screen",
-            "lg:flex lg:h-[700px] lg:flex-col lg:justify-center",
-            "xl:h-[800px]"
+            "md:h-[450px]",
+            "lg:flex lg:h-[500px] lg:flex-col lg:justify-center",
+            "xl:h-[550px]"
           )}>
-          <div className={clsx("flex flex-col", "lg:flex-row-reverse lg:items-center lg:justify-between")} ref={ref}>
+          <div className={clsx("flex flex-col h-full", "lg:flex-row-reverse lg:items-center lg:justify-between")}>
             <div className={clsx("relative flex items-center justify-center")}>
-              <div
+              {/* <div
                 className={clsx(
                   "absolute z-0 mx-auto mr-7 mt-10 h-[377px] w-[255px] rounded-full border-2 border-white",
                   "lg:mr-14 lg:h-[500px] lg:w-[300px]",
@@ -49,102 +45,21 @@ export default function Header() {
               />
               <div className={clsx("z-10 mx-auto mt-10 h-[377px] w-[255px] rounded-full", "lg:h-[500px] lg:w-[300px]", "xl:h-[600px] xl:w-[400px]")}>
                 <Image alt="women at work" src={Woman} className={clsx("h-full w-full rounded-full")} />
-              </div>
+              </div> */}
             </div>
-            <div className={clsx("space-y-6", "sm:space-y-6")}>
-              <h3
-                className={clsx(`pt-14 font-sego uppercase leading-[30px]`, "md:leading-[60px]", "lg:pt-0 lg:leading-[45px]", "xl:leading-[70px]")}
-                style={{ fontSize: width < 800 ? width / 11.6 + "px" : width / 21 }}>
+            <div className={clsx("space-y-6 h-full flex flex-col justify-end pb-5", "sm:space-y-6", "lg:w-full lg:flex-row lg:justify-between lg:items-end lg:pb-20")}>
+              <div className={clsx("-space-y-2", "md:-space-y-4", "xl:-space-y-6")}>
+                <h3
+                  className={clsx("pt-14 font-glacialBold")} style={{ fontSize: width < 900 ? width / 10.3 + "px" : width > 2500 ? width / 30 : width / 20 }}>
                 Start your business
-              </h3>
-              <div className={clsx("w-full space-y-4", "sm:space-y-6")}>
-                <div className={clsx("flex items-end space-x-4", "xl:space-x-8")}>
-                  <h3
-                    className={clsx(
-                      "font-sego uppercase leading-[30px]",
-                      "sm:leading-[35px]",
-                      "md:leading-[60px]",
-                      "lg:leading-[55px]",
-                      "xl:leading-[70px]"
-                    )}
-                    style={{ fontSize: width < 800 ? width / 11.6 + "px" : width / 21 }}>
-                    Quickly
-                  </h3>
-                  <div className={clsx("flex h-7 w-full items-center justify-end rounded-full border-2", "sm:h-8", "md:h-12", "lg:h-10", "xl:h-14")}>
-                    {/*  <input
-                      type="search"
-                      placeholder="Search here"
-                      aria-label="Search"
-                      className="h-full w-full rounded-full border-none bg-transparent pl-4 pr-2 text-white focus:border-none focus:outline-none focus:ring-0"
-                    />
-                    <button type="button" className={clsx("h-full w-8 rounded-full bg-white", "lg:mr-0.5 lg:h-12 lg:w-20")}></button> */}
-                  </div>
-                </div>
-                <div className={clsx("flex items-end space-x-4", "xl:space-x-8")}>
-                  <div
-                    className={clsx(
-                      "flex h-7 w-28 items-center justify-center rounded-full border-2",
-                      "xs:w-32",
-                      "sm:h-8 sm:w-36",
-                      "md:h-12 md:w-64",
-                      "lg:h-10 lg:w-44",
-                      "xl:h-14 xl:w-60"
-                    )}>
-                    <div className="flex h-[90%] w-[98%] items-center justify-center rounded-full bg-white">
-                      <Image alt="" src={Shape} className={clsx("h-[30px] w-[30px]", "md:h-14 md:w-14", "lg:h-[40px] lg:w-[40px]")} />
-                    </div>
-                  </div>
-                  <h3
-                    className={clsx(
-                      "font-sego uppercase leading-[30px]",
-                      "sm:leading-[35px]",
-                      "md:leading-[60px]",
-                      "lg:leading-[55px]",
-                      "xl:leading-[70px]"
-                    )}
-                    style={{ fontSize: width < 800 ? width / 11.6 + "px" : width / 21 }}>
-                    And easily
-                  </h3>
-                </div>
+                </h3>
+                <h4 className={clsx("font-glacialRegular")} style={{ fontSize: width < 900 ? width / 12 + "px" : width > 2500 ? width / 32 : width / 21 }}>Quickly & Easily</h4>
               </div>
-              <p className={clsx("text-lg font-light text-gray-200", "md:text-xl", "lg:w-[450px] lg:pt-2", "xl:w-[550px] xl:text-2xl")}>
-                Discover our exclusive selection of high-converting, on-trend themes designed to save you precious design time.
+              <p className={clsx("text-xl font-light text-gray-200", "md:text-xl md:w-[450px]", "lg:pt-2 lg:w-80", "xl:w-[450px] xl:text-2xl")}>
+                Our exclusive selection of high-converting themes designed to save you precious design time.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div className={clsx("textRightToLeft h-14 border-b-2 border-t-2 font-sego uppercase text-white shadow-md")}>
-        <div>
-          <span>
-            <div className="flex items-center">
-              high-converting <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              trend <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              creative <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              efficient <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              attractive <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              high-converting <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              trend <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              creative <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              efficient <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              attractive <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              high-converting <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              trend <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              creative <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              efficient <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              attractive <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              high-converting <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              trend <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              creative <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              efficient <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              attractive <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              high-converting <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              trend <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              creative <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              efficient <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-              attractive <Image alt="" src={ShapeIcon} className="h-[40px] w-[40px]" />
-            </div>
-          </span>
         </div>
       </div>
     </header>

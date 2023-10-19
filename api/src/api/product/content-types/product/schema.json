@@ -54,6 +54,9 @@
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "product"
+    },
+    "itemId": {
+      "type": "string"
     }
   }
 }

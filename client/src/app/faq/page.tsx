@@ -14,19 +14,19 @@ export default async function FaqPages() {
   });
   return (
     <main>
-      <div className="container">
-        <NavBar />
-        <div className="py-10">
-          <div className={clsx("mx-auto min-h-[320px] space-y-10 py-20 text-center", "md:w-[500px]", "xl:w-[800px]")}>
-            <h3 className={clsx("text-5xl font-bold", "lg:text-8xl")}>Frequently Asked Questions</h3>
-            <p className={clsx("py-2 text-lg", "md:text-xl", "lg:py-4 lg:text-[22px]")}>Some questions asked by our customers</p>
-          </div>
-          <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <div className="container">
+          <NavBar />
+          <div className="py-10">
+            <div className={clsx("mx-auto min-h-[320px] space-y-10 py-20 text-center", "md:w-[500px]", "xl:w-[800px]")}>
+              <h3 className={clsx("text-5xl font-bold", "lg:text-8xl")}>Frequently Asked Questions</h3>
+              <p className={clsx("py-2 text-lg", "md:text-xl", "lg:py-4 lg:text-[22px]")}>Some questions asked by our customers</p>
+            </div>
             <FAQ data={faq} />
-          </Suspense>
+          </div>
         </div>
-      </div>
-      <Footer />
+        <Footer />
+      </Suspense>
     </main>
   );
 }

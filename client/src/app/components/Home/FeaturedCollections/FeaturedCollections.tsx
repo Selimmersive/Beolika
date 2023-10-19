@@ -10,9 +10,9 @@ export default function FeaturedCollections({ data, title }: { data: ProductDto[
   return (
     <section className="bg-[var(--color-primary)]">
       <div className="container">
-        <div className="space-y-2 py-10 md:space-y-4">
-          <h5 className={clsx("font-sego text-3xl uppercase", "sm:text-4xl", "md:text-5xl", "lg:text-5xl", "xl:text-6xl")}>{title}</h5>
-          <div className="flex w-full flex-col items-center justify-center gap-4 pt-14 lg:grid lg:grid-cols-3 lg:justify-items-center lg:gap-8">
+        <div className="space-y-2 py-10">
+          <h5 className={clsx("font-glacialRegular text-2xl pb-4", "lg:text-5xl", "xl:text-3xl")}>{title}</h5>
+          <div className="flex w-full flex-col items-center justify-center gap-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:justify-items-center">
             {data && (
               data.slice(0, 3).map((theme) => (
                 <Card

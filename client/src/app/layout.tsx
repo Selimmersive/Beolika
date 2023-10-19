@@ -20,9 +20,28 @@ const sego = localFont({
   ],
   variable: "--font-sego",
 });
+
+const glacialRegular = localFont({
+  src: [
+    {
+      path: "../../public/fonts/glacialRegular.otf",
+    },
+  ],
+  variable: "--font-glacial-regular",
+});
+
+const glacialBold = localFont({
+  src: [
+    {
+      path: "../../public/fonts/glacialBold.otf",
+    },
+  ],
+  variable: "--font-glacial-bold",
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${darker.variable} ${sego.variable}`}>
+    <html lang="en" className={`${darker.variable} ${sego.variable} ${glacialRegular.variable} ${glacialBold.variable}`}>
       <Head>
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />

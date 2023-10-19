@@ -27,14 +27,14 @@ export default function Card({
   return (
     <Link href={href} className="w-full cursor-pointer text-white transition-all delay-75 hover:scale-105">
       <div className={clsx("w-full")}>
-        <Image src={imgSrc} alt={imgAlt} className="rounded-t-lg bg-cover" width={imgWidth} height={imgHeight} />
+        <Image src={imgSrc} alt={imgAlt} className="rounded-2xl bg-cover" width={imgWidth} height={imgHeight} />
       </div>
-      <div className="my-4 border-y py-2">
+      <div className="my-4 pb-2">
         <div className="flex items-center justify-between">
-          <h5 className="text-lg font-semibold md:text-xl">{name}</h5>
-          <p className="text-lg font-semibold md:text-xl">{price}</p>
+          <h5 className="text-lg font-glacialRegular md:text-xl">{name}</h5>
+          <p className="text-lg font-glacialRegular md:text-xl">{price}</p>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between pt-1">
           <p className="text-lg font-semibold uppercase md:text-xl">{category}</p>
           <GetRatings value={ratings} className="text-lg" />
         </div>

@@ -11,6 +11,10 @@
     --tw-scale-y: 1.05;
 }
 
+.full-width-text {
+  font-size: calc(24vw + 1rem);
+}
+
 .no-scroll {
   overflow: hidden;
 }

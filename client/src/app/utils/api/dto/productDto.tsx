@@ -7,6 +7,7 @@ export interface ProductDto {
     name: string;
     price: number;
     dataUid: string;
+    itemId: string;
     createdAt: string;
     updatedAt: string;
     publishedAt: string;

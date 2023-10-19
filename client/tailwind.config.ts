@@ -11,6 +11,8 @@ const config: Config = {
       fontFamily: {
         darker: ["var(--font-darker)"],
         sego: ["var(--font-sego)"],
+        glacialRegular: ["var(--font-glacial-regular)"],
+        glacialBold: ["var(--font-glacial-bold)"],
       },
     },
     screens: {
