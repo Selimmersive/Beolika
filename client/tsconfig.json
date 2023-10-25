@@ -38,7 +38,7 @@
     "**/*.tsx",
     "src/**/*.tsx",
     ".next/types/**/*.ts"
-, "src/app/_document.jd", "src/utils/data/fetcher.utils.js"  ],
+, "src/app/_document.jd", "src/utils/data/fetcher.utils.js", "src/app/api/products.js"  ],
   "exclude": [
     "node_modules"
   ]

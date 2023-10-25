@@ -1,10 +1,11 @@
+"use client";
 import "./globals.css";
 import { Darker_Grotesque } from "next/font/google";
 import Script from "next/script";
 import Head from "next/head";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
-import React from "react";
+import React, { useEffect } from "react";
 
 export const metadata = {
   title: "Beolika Themes",
@@ -40,6 +41,20 @@ const glacialBold = localFont({
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  
+  useEffect(() => {
+    document.addEventListener("snipcart.ready", () => {
+      Snipcart.api.theme.customization.registerPaymentFormCustomization({
+        input: {
+          color: "white"
+        },
+        label: {
+          color: "white"
+        }
+      });
+    });
+  }, []);
+
   return (
     <html lang="en" className={`${darker.variable} ${sego.variable} ${glacialRegular.variable} ${glacialBold.variable}`}>
       <Head>
@@ -53,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           async
           src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"
           id="snipcart"
-          data-api-key={process.env.SNIPCART_API_TOKEN}
+          data-api-key="YzhhNzM3YmMtNDY4Ny00OGYxLTg3ZDYtNzIxMDI5ZmQwYmE5NjM4MTQ1MTk2OTM4NDY2NzEy"
           data-config-modal-style="side"></Script>
       </body>
     </html>

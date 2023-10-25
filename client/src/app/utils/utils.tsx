@@ -56,7 +56,7 @@ const renderOfError = (errorCode: number) => {
 export const dateFormat = (date: Date) => {
   const YYYY = date.getFullYear();
   const DD = date.getDate();
-  const Month = date.getMonth() + 4;
+  const Month = date.getMonth() + 1;
   return `${DD}/${Month}/${YYYY}`;
 };
 
