@@ -8,7 +8,6 @@ import { ReviewDto } from "./api/dto/reviewDto";
 import toast from "react-hot-toast";
 
 export const renderOfButtonSelected = (selected: number, product: ProductDto, productDetails: ProductDetailsDto, productFaqs: FaqDto) => {
-  product.attributes.reviews.data.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
   switch (selected) {
   case 0:
     return <Description data={productDetails} />;

@@ -7,7 +7,7 @@ import { API_URL } from "@/utils/urls";
 import { BsArrowUpRight } from 'react-icons/bs';
 
 export default function FeaturedCollections({ data, title }: { data: ProductDto[]; title: string }) {
-  data?.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
+  const productsSorted = data?.toSorted?.((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
   return (
     <section className="bg-[var(--color-primary)]">
       <div className="container">
@@ -17,8 +17,8 @@ export default function FeaturedCollections({ data, title }: { data: ProductDto[
             <button onClick={() => window.open("/themes","_self")} className={clsx("hidden text-xl hover:underline font-glacialRegular", "md:flex md:items-center md:gap-2")}>See More <BsArrowUpRight  /></button>
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:justify-items-center">
-            {data && (
-              data.slice(0, 3).map((theme) => (
+            {productsSorted && (
+              productsSorted.slice(0, 3).map((theme) => (
                 <ProductCard
                   key={theme.id}
                   name={theme.attributes.name}

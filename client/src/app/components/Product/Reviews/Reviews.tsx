@@ -11,6 +11,7 @@ export default function Reviews({ data }: { data: ProductDto }) {
   const [isOpenReviewForm, setIsOpenReviewForm] = useState(false);
   const [showMore, setShowMore] = useState(5);
 
+  const reviewsSorted = reviews.data?.toSorted?.((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
   const loadMoreReviews = () => {
     setShowMore((prevShowMore) => prevShowMore + 5);
   };
@@ -34,8 +35,8 @@ export default function Reviews({ data }: { data: ProductDto }) {
         <ReviewsForm setIsOpenReviewForm={setIsOpenReviewForm} product={data} />
       )}
 
-      {reviews.data.length ? (
-        reviews.data.slice(0, showMore).map((review, index) => (
+      {reviewsSorted.length ? (
+        reviewsSorted.slice(0, showMore).map((review, index) => (
           <div key={index} className={clsx("break-words space-y-4 border-b py-6", "lg:space-y-4 lg:py-10")}>
             <div className={clsx("flex items-center justify-between space-x-3")}>
               <span className={clsx("text-xl", "lg:text-2xl")}>{review?.attributes.name}</span>
@@ -56,7 +57,7 @@ export default function Reviews({ data }: { data: ProductDto }) {
         </div>
       )}
 
-      {reviews.data.length > showMore && (
+      {reviewsSorted.length > showMore && (
         <div className={clsx("flex items-center justify-center space-x-4 pt-10", "2xl:pt-20")}>
           <button
             type="button"

@@ -5,6 +5,9 @@ import { calculateAverageRating } from "@/utils/utils";
 import clsx from "clsx";
 
 export default function Collections({ data }: { data: ProductDto[] }) {
+
+  const productsSorted = data?.toSorted?.((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
+  
   return (
     <section className="bg-primary">
       <div className="container">
@@ -15,8 +18,8 @@ export default function Collections({ data }: { data: ProductDto[] }) {
               "md:grid md:grid-cols-2",
               "lg:grid-cols-3 lg:justify-items-center lg:gap-8"
             )}>
-            {data ? (
-              data.map((theme: ProductDto) => (
+            {productsSorted ? (
+              productsSorted.map((theme: ProductDto) => (
                 <ProductCard
                   key={theme.id}
                   name={theme.attributes.name}

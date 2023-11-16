@@ -20,8 +20,6 @@ export default async function AllCollections() {
     errorResponse(err);
   });
 
-  allProducts.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
-
   return (
     <main>
       <div className="container">
