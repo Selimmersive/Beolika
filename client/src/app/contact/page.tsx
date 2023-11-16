@@ -4,6 +4,14 @@ import Loading from "./loading";
 import clsx from "clsx";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "Contact",
+  description: "At Beolika, we are committed to providing exceptional customer service. We are here to guide you in your choice, answer your questions and offer personalized assistance at every stage of your shopping experience. Your satisfaction and happiness are our top priority.",
+  alternates: {
+    canonical: `/contact`
+  }
+};
+
 export default function ContactPage() {
   
   return (
@@ -23,7 +31,7 @@ export default function ContactPage() {
                 href="mailto:hello@beolika.com"
                 type="button"
                 className={clsx(
-                  "w-60 bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105",
+                  "w-60 bg-white py-3 text-center text-lg font-bold uppercase text-primary transition-all delay-75 hover:scale-105",
                   "lg:w-[250px]"
                 )}>
               Contact

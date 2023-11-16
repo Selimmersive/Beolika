@@ -1,4 +1,4 @@
-import Card from "@/components/ui/Card";
+import ProductCard from "@/components/ui/ProductCard";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { API_URL } from "@/utils/urls";
 import { calculateAverageRating } from "@/utils/utils";
@@ -8,11 +8,11 @@ export default function Suggestion({ productSuggest }: { productSuggest: Product
   return (
     <div className="border-t">
       <div className="container">
-        <h5 className={clsx("py-6 text-center text-3xl font-glacialBold", "lg:text-4xl")}>You may also like</h5>
+        <h5 className={clsx("py-6 text-center text-3xl font-darker font-bold", "lg:text-4xl")}>You may also like</h5>
         <div className="flex w-full flex-col items-center justify-center gap-4 pb-10 pt-14 lg:grid lg:grid-cols-3 lg:justify-items-center lg:gap-8">
           {productSuggest ? (
             productSuggest.map((theme) => (
-              <Card
+              <ProductCard
                 key={theme.id}
                 name={theme.attributes.name}
                 category="shopify"

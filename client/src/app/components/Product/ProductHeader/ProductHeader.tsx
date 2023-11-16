@@ -75,7 +75,7 @@ export default function ProductHeader({ product, productLists }: { product: Prod
                   View Live Demo
                 </button>
                 <button
-                  className="snipcart-add-item w-full bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105"
+                  className="snipcart-add-item w-full bg-white py-3 text-center text-lg font-bold uppercase text-primary transition-all delay-75 hover:scale-105"
                   data-item-id={product.id.toString()}
                   data-item-name={name}
                   data-item-price={price}

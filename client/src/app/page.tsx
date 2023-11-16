@@ -8,6 +8,12 @@ import Header from "@/components/Home/Header";
 import Footer from "@/components/ui/Footer";
 import About from "./components/Home/About";
 
+export const metadata = {
+  title: "Beolika - Home",
+  alternates: {
+    canonical: `https://beolika.com/`,
+  }
+};
 export default async function Home() {
   const shopifyThemes: ProductDto[] = await getProductsByCategory("shopify").catch((err) => {
     errorResponse(err);

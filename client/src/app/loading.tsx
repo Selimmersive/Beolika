@@ -30,7 +30,7 @@ export default function Loading() {
           </div>
         </div>
       </div>
-      <section className="w-full bg-[var(--color-primary)]">
+      <section className="w-full bg-primary">
         <div className="space-y-4 py-10">
           <div className={clsx("md:flex md:justify-between md:items-center md:w-full")}>
             <div className={clsx("w-[35%] h-1.5 rounded-full bg-gray-200 hidden", "md:block md:w-24")} />

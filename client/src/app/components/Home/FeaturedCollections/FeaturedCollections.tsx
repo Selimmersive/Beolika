@@ -1,6 +1,6 @@
 "use client";
 import clsx from "clsx";
-import Card from "@/components/ui/Card/Card";
+import ProductCard from "@/components/ui/ProductCard/ProductCard";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { calculateAverageRating } from "@/utils/utils";
 import { API_URL } from "@/utils/urls";
@@ -19,7 +19,7 @@ export default function FeaturedCollections({ data, title }: { data: ProductDto[
           <div className="flex w-full flex-col items-center justify-center gap-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:justify-items-center">
             {data && (
               data.slice(0, 3).map((theme) => (
-                <Card
+                <ProductCard
                   key={theme.id}
                   name={theme.attributes.name}
                   category="shopify"

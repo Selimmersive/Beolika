@@ -10,6 +10,20 @@ import ProductHeader from "@/components/Product/ProductHeader";
 import Suggestion from "@/components/Product/Suggestion";
 import Footer from "@/components/ui/Footer";
 import Loading from "./loading";
+import { Metadata } from "next";
+
+export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
+  const product: ProductDto = await getProductBySlug(params.slug).catch((err) => {
+    errorResponse(err);
+  });
+  return {
+    title: `${product.attributes.name} ${product.attributes.subtitle ?? ""}`,
+    description: product.attributes.shortDescription,
+    alternates: {
+      canonical: `/themes/${params.slug}`
+    }
+  };
+};
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
   const product: ProductDto = await getProductBySlug(params.slug).catch((err) => {
@@ -28,6 +42,16 @@ export default async function ProductPage({ params }: { params: { slug: string }
   const productByCategory: ProductDto[] = await getProductsByCategory(product ? categoryName : "").catch((err) => {
     errorResponse(err);
   });
+
+  /* const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.attributes.name,F
+    image: process.env.NODE_ENV === "development"
+      ? `${API_URL}${product.attributes.cover.data.attributes.formats.large.url}`
+      : `${product.attributes.cover.data.attributes.formats.large.url}`,
+    description: product.attributes.shortDescription
+  }; */
 
   const suggestedProducts = getRandomProducts(productByCategory, params.slug).slice(0, 3);
 

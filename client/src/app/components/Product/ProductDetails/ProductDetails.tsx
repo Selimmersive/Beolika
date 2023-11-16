@@ -19,7 +19,7 @@ export default function ProductDetails({
   const buttons = ["Description", "FAQ", `Reviews ${product.attributes.reviews ? `(${product.attributes.reviews.data.length})` : ""}`];
 
   return (
-    <div className="bg-[var(--color-primary)] text-white">
+    <div className="bg-primary text-white">
       <div className="container font-darker">
         <div className={clsx("flex items-center justify-center space-x-10")}>
           {buttons.map((dataButtons, index) => (

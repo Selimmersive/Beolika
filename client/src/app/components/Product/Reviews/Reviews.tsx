@@ -11,7 +11,6 @@ export default function Reviews({ data }: { data: ProductDto }) {
   const [isOpenReviewForm, setIsOpenReviewForm] = useState(false);
   const [showMore, setShowMore] = useState(5);
 
-  reviews.data.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
   const loadMoreReviews = () => {
     setShowMore((prevShowMore) => prevShowMore + 5);
   };
@@ -63,7 +62,7 @@ export default function Reviews({ data }: { data: ProductDto }) {
             type="button"
             onClick={loadMoreReviews}
             className={clsx(
-              "w-full bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105",
+              "w-full bg-white py-3 text-center text-lg font-bold uppercase text-primary transition-all delay-75 hover:scale-105",
               "lg:w-[250px]"
             )}>
             See more

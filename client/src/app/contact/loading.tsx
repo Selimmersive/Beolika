@@ -24,7 +24,7 @@ export default function Loading() {
               <div className={clsx("w-[90%] h-2 rounded-full bg-gray-200")} />
             </div>
             <div
-              className={clsx("w-full h-12 bg-white py-3 text-center text-lg font-bold uppercase text-[var(--color-primary)] transition-all delay-75 hover:scale-105", "lg:w-72 lg:mx-auto")}
+              className={clsx("w-full h-12 bg-white py-3 text-center text-lg font-bold uppercase text-primary transition-all delay-75 hover:scale-105", "lg:w-72 lg:mx-auto")}
             />
           </div>
         </div>

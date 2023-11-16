@@ -14,6 +14,9 @@ const config: Config = {
         glacialRegular: ["var(--font-glacial-regular)"],
         glacialBold: ["var(--font-glacial-bold)"],
       },
+      colors: {
+        primary: "#111",
+      }
     },
     screens: {
       xs: "370px",

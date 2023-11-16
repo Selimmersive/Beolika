@@ -117,3 +117,20 @@ export async function getLegalPageBySlug(slug: string) {
   const data = await res.json();
   return data.data[0];
 }
+
+export async function getAllLegals() {
+  const query = qs.stringify(
+    {
+      populate: "*",
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const res = await fetch(`${API_URL}/api/legals?${query}`, {
+  });
+
+  const data = await res.json();
+  return data.data;
+}

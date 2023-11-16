@@ -1,13 +1,12 @@
 "use client";
-import Card from "@/components/ui/Card/Card";
+import ProductCard from "@/components/ui/ProductCard/ProductCard";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { calculateAverageRating } from "@/utils/utils";
 import clsx from "clsx";
 
 export default function Collections({ data }: { data: ProductDto[] }) {
-  data.sort((a, b) => Number(new Date(b.attributes.publishedAt)) - Number(new Date(a.attributes.publishedAt)));
   return (
-    <section className="bg-[var(--color-primary)]">
+    <section className="bg-primary">
       <div className="container">
         <div className={clsx("space-y-2 py-10", "md:space-y-4")}>
           <div
@@ -18,7 +17,7 @@ export default function Collections({ data }: { data: ProductDto[] }) {
             )}>
             {data ? (
               data.map((theme: ProductDto) => (
-                <Card
+                <ProductCard
                   key={theme.id}
                   name={theme.attributes.name}
                   category={theme.attributes.categories.data[0].attributes.name}

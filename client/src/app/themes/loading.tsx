@@ -9,7 +9,7 @@ export default function Loading() {
       <div className="container">
         <SkeletonNavBar />
       </div>
-      <section className="bg-[var(--color-primary)]">
+      <section className="bg-primary">
         <div className="container">
           <div className={clsx("space-y-2 py-10", "md:space-y-4")}>
             <div

@@ -90,7 +90,7 @@ export default function Loading() {
           </div>
         </div>
       </header>
-      <section className="bg-[var(--color-primary)] text-white">
+      <section className="bg-primary text-white">
         <div className="container animate-pulse">
           <div className={clsx("flex items-center justify-center space-x-10 py-6")}>
             <div className={clsx("w-20 h-3 rounded-full bg-gray-200")} />

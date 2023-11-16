@@ -3,7 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import GetRatings from "@/utils/getRating";
 
-export default function Card({
+export default function ProductCard({
   name,
   category,
   price,

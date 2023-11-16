@@ -8,6 +8,14 @@ import FAQ from "@/components/ui/FAQ";
 import Loading from "../loading";
 import { errorResponse } from "@/utils/utils";
 
+export const metadata = {
+  title: "FAQ",
+  description: "Some questions asked by our customers",
+  alternates: {
+    canonical: `/faq`
+  }
+};
+
 export default async function FaqPages() {
   const faq: FaqDto = await getProductFaqs("shopify").catch((err) => {
     errorResponse(err);
