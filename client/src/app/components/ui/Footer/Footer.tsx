@@ -57,8 +57,8 @@ export default function Footer() {
         <div className="pb-2">
           <p className="mt-10 font-semiBold border-t-2 pt-3 text-center text-lg md:text-xl">
             © 2023, Beolika made by{" "}
-            <a href="mailto:hello@selimmersive.com" className="hover:underline">
-              Selimmersive
+            <a href="mailto:hello@sayro.dev" className="hover:underline">
+              Sayrodev
             </a>
           </p>
         </div>

@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/ui/Footer";
 import NavBar from "@/components/ui/NavBar";
 import Loading from "./loading";
@@ -27,15 +28,16 @@ export default function ContactPage() {
               At Beolika, we are committed to providing exceptional customer service. We are here to guide you in your choice, answer your questions
               and offer personalized assistance at every stage of your shopping experience. Your satisfaction and happiness are our top priority.
               </p>
-              <a
-                href="mailto:hello@beolika.com"
+              <button
+                onClick={() => window.location.href = "mailto:hello@beolika.com"}
                 type="button"
                 className={clsx(
                   "w-60 bg-white py-3 text-center text-lg font-bold uppercase text-primary transition-all delay-75 hover:scale-105",
                   "lg:w-[250px]"
-                )}>
-              Contact
-              </a>
+                )}
+              >
+                Contact
+              </button>
             </div>
           </div>
         </div>

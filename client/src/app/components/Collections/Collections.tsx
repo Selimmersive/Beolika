@@ -1,5 +1,5 @@
 "use client";
-import ProductCard from "@/components/ui/ProductCard/ProductCard";
+import ProductCard from "@/components/Product/ProductCard/ProductCard";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { calculateAverageRating } from "@/utils/utils";
 import clsx from "clsx";

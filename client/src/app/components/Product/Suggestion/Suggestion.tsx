@@ -1,4 +1,4 @@
-import ProductCard from "@/components/ui/ProductCard";
+import ProductCard from "@/components/Product/ProductCard";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { API_URL } from "@/utils/urls";
 import { calculateAverageRating } from "@/utils/utils";
