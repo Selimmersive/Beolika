@@ -2,7 +2,7 @@ import { getAllLegals, getAllProducts } from "@/utils/api/api";
 import { ProductDto } from "@/utils/api/dto/productDto";
 
 export default async function sitemap() {
-  const baseUrl = "https://shopithemes.sayro.dev";
+  const baseUrl = "https://shopithemes.beolika.com";
 
   const products: ProductDto[] = await getAllProducts();
   const legals: ProductDto[] = await getAllLegals();
