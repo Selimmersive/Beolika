@@ -1,7 +1,7 @@
 "use client";
-import ProductCard from "@/components/ProductCard";
-import { ProductDto } from "@/utils/api/dto/productDto";
-import { calculateAverageRating } from "@/utils/utils";
+import ProductCard from "@/app/components/ProductCard";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
+import { calculateAverageRating } from "@/app/utils/utils";
 import clsx from "clsx";
 
 export default function Collections({ data }: { data: ProductDto[] }) {

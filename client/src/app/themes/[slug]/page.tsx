@@ -1,14 +1,14 @@
 import React, { Suspense } from "react";
-import { getProductBySlug, getProductDetails, getProductFaqs, getProductLists, getProductsByCategory } from "@/utils/api/api";
-import { errorResponse, getRandomProducts } from "@/utils/utils";
-import { ProductDetailsDto } from "@/utils/api/dto/productDetailsDto";
-import { ProductListsDto } from "@/utils/api/dto/productListsDto";
-import { ProductDto } from "@/utils/api/dto/productDto";
-import { FaqDto } from "@/utils/api/dto/faqDto";
-import ProductDetails from "@/components/ProductDetails";
-import ProductHeader from "@/components/ProductHeader";
-import Suggestion from "@/components/Suggestion";
-import Footer from "@/components/Footer";
+import { getProductBySlug, getProductDetails, getProductFaqs, getProductLists, getProductsByCategory } from "../../utils/api/api";
+import { errorResponse, getRandomProducts } from "../../utils/utils";
+import { ProductDetailsDto } from "../../utils/api/dto/productDetailsDto";
+import { ProductListsDto } from "../../utils/api/dto/productListsDto";
+import { ProductDto } from "../../utils/api/dto/productDto";
+import { FaqDto } from "../../utils/api/dto/faqDto";
+import ProductDetails from "@/app/components/ProductDetails";
+import ProductHeader from "@/app/components/ProductHeader";
+import Suggestion from "@/app/components/Suggestion";
+import Footer from "@/app/components/Footer";
 import Loading from "./loading";
 import { Metadata } from "next";
 

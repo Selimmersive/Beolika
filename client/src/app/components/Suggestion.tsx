@@ -1,7 +1,7 @@
-import ProductCard from "@/components/ProductCard";
-import { ProductDto } from "@/utils/api/dto/productDto";
-import { API_URL } from "@/utils/urls";
-import { calculateAverageRating } from "@/utils/utils";
+import ProductCard from "@/app/components/ProductCard";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
+import { API_URL } from "@/app/utils/urls";
+import { calculateAverageRating } from "@/app/utils/utils";
 import clsx from "clsx";
 
 export default function Suggestion({ productSuggest }: { productSuggest: ProductDto[]}) {

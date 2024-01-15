@@ -2,11 +2,11 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { FaRegStar, FaStar } from "react-icons/fa";
-import { ReviewSchema } from "@/lib/schema";
+import { ReviewSchema } from "@/app/lib/schema";
 import { zodResolver } from '@hookform/resolvers/zod';
-import { ProductDto } from "@/utils/api/dto/productDto";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
 import { useRouter } from "next/navigation";
-import { API_URL } from "@/utils/urls";
+import { API_URL } from "@/app/utils/urls";
 import { z } from "zod";
 import clsx from "clsx";
 import toast from "react-hot-toast";

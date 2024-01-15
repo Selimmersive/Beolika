@@ -1,9 +1,9 @@
 "use client";
 import clsx from "clsx";
-import ProductCard from "@/components/ProductCard";
-import { ProductDto } from "@/utils/api/dto/productDto";
-import { calculateAverageRating } from "@/utils/utils";
-import { API_URL } from "@/utils/urls";
+import ProductCard from "@/app/components/ProductCard";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
+import { calculateAverageRating } from "@/app/utils/utils";
+import { API_URL } from "@/app/utils/urls";
 import { BsArrowUpRight } from 'react-icons/bs';
 
 export default function FeaturedCollections({ data, title }: { data: ProductDto[]; title: string }) {

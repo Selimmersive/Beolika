@@ -1,5 +1,5 @@
-import { getAllLegals, getAllProducts } from "@/utils/api/api";
-import { ProductDto } from "@/utils/api/dto/productDto";
+import { getAllLegals, getAllProducts } from "@/app/utils/api/api";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
 
 export default async function sitemap() {
   const baseUrl = "https://shopithemes.beolika.com";

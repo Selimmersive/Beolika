@@ -1,10 +1,10 @@
 "use client";
 import clsx from "clsx";
 import { useState } from "react";
-import { ProductDto } from "@/utils/api/dto/productDto";
-import { dateFormat } from "@/utils/utils";
-import GetRatings from "@/utils/getRating";
-import ReviewsForm from "@/components/ReviewsForm";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
+import { dateFormat } from "@/app/utils/utils";
+import GetRatings from "@/app/utils/getRating";
+import ReviewsForm from "@/app/components/ReviewsForm";
 
 export default function Reviews({ data }: { data: ProductDto }) {
   const { reviews } = data.attributes;

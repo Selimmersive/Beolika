@@ -1,8 +1,8 @@
 "use client";
-import { FaqDto } from "@/utils/api/dto/faqDto";
-import { ProductDetailsDto } from "@/utils/api/dto/productDetailsDto";
-import { ProductDto } from "@/utils/api/dto/productDto";
-import { renderOfButtonSelected } from "@/utils/utils";
+import { FaqDto } from "@/app/utils/api/dto/faqDto";
+import { ProductDetailsDto } from "@/app/utils/api/dto/productDetailsDto";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
+import { renderOfButtonSelected } from "@/app/utils/utils";
 import clsx from "clsx";
 import { useState } from "react";
 

@@ -1,6 +1,6 @@
 "use client";
-import SkeletonFooter from "@/components/SkeletonFooter";
-import SkeletonNavBar from "@/components/SkeletonNavBar";
+import SkeletonFooter from "@/app/components/SkeletonFooter";
+import SkeletonNavBar from "@/app/components/SkeletonNavBar";
 import clsx from "clsx";
 import { BsFillImageFill } from "react-icons/bs";
 

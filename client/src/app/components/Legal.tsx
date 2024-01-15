@@ -1,4 +1,4 @@
-import { LegalDto } from "@/utils/api/dto/legalDto";
+import { LegalDto } from "@/app/utils/api/dto/legalDto";
 import clsx from "clsx";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import NavBar from "./NavBar";

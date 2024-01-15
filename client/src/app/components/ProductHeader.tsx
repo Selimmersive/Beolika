@@ -1,13 +1,13 @@
 "use client";
-import NavBar from "@/components/NavBar";
-import { ProductDto } from "@/utils/api/dto/productDto";
+import NavBar from "@/app/components/NavBar";
+import { ProductDto } from "@/app/utils/api/dto/productDto";
 import clsx from "clsx";
 import Image from "next/image";
 import { ImUnlocked } from "react-icons/im";
-import { ProductListsDto } from "@/utils/api/dto/productListsDto";
-import { calculateAverageRating } from "@/utils/utils";
-import GetRatings from "@/utils/getRating";
-import { API_URL } from "@/utils/urls";
+import { ProductListsDto } from "@/app/utils/api/dto/productListsDto";
+import { calculateAverageRating } from "@/app/utils/utils";
+import GetRatings from "@/app/utils/getRating";
+import { API_URL } from "@/app/utils/urls";
 
 export default function ProductHeader({ product, productLists }: { product: ProductDto; productLists: ProductListsDto }) {
   const { cover, name, price, subtitle, reviews, shortDescription, categories, url, dataUid, slug } = product.attributes;

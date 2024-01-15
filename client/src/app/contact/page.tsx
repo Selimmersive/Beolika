@@ -1,7 +1,7 @@
-import Footer from "@/components/Footer";
+import Footer from "@/app/components/Footer";
 import Loading from "./loading";
 import { Suspense } from "react";
-import Contact from "@/components/Contact";
+import Contact from "@/app/components/Contact";
 
 export const metadata = {
   title: "Contact",

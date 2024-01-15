@@ -1,12 +1,12 @@
-import { getProductsByCategory } from "@/utils/api/api";
-import { errorResponse } from "@/utils/utils";
-import { ProductDto } from "@/utils/api/dto/productDto";
+import { getProductsByCategory } from "./utils/api/api";
+import { errorResponse } from "./utils/utils";
+import { ProductDto } from "./utils/api/dto/productDto";
 import { Suspense } from "react";
-import FeaturedCollections from "@/components/FeaturedCollections";
+import FeaturedCollections from "@/app/components/FeaturedCollections";
 import Loading from "./loading";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import About from "@/components/About";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import About from "@/app/components/About";
 
 export const metadata = {
   title: "Shopithemes - Home",

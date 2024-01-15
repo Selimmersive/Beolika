@@ -1,5 +1,5 @@
 "use client";
-import { FaqDto } from "@/utils/api/dto/faqDto";
+import { FaqDto } from "@/app/utils/api/dto/faqDto";
 import clsx from "clsx";
 import { useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";

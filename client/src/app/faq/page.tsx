@@ -1,12 +1,12 @@
 import React, { Suspense } from "react";
-import { getProductFaqs } from "@/utils/api/api";
-import { FaqDto } from "@/utils/api/dto/faqDto";
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import { getProductFaqs } from "@/app/utils/api/api";
+import { FaqDto } from "@/app/utils/api/dto/faqDto";
+import Footer from "@/app/components/Footer";
+import NavBar from "@/app/components/NavBar";
 import clsx from "clsx";
-import FAQ from "@/components/Faq";
+import FAQ from "@/app/components/Faq";
 import Loading from "../loading";
-import { errorResponse } from "@/utils/utils";
+import { errorResponse } from "@/app/utils/utils";
 
 export const metadata = {
   title: "FAQ",

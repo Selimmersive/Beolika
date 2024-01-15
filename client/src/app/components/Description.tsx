@@ -1,5 +1,5 @@
 "use client";
-import { ProductDetailsDto } from "@/utils/api/dto/productDetailsDto";
+import { ProductDetailsDto } from "@/app/utils/api/dto/productDetailsDto";
 import clsx from "clsx";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
