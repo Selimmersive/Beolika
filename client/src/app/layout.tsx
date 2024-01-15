@@ -14,7 +14,7 @@ export const metadata = {
     template: `Shopithemes - %s`,
   },
   description: "Library of high-conversion, attractive and trendy themes",
-  generator: 'Next.js',
+  generator: 'Next.js & Strapi',
   applicationName: 'Shopithemes',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'Next', 'Next 13', 'React', 'Typescript', 'Tailwindcss', 'JavaScript', 'Shopify', 'Themes', 'Templates', 'Theme', 'Template', 'Library', 'High-conversion', 'Trendy'],
