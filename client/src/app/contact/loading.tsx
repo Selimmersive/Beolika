@@ -1,5 +1,5 @@
-import SkeletonFooter from "@/components/ui/Skeleton/Footer/SkeletonFooter";
-import SkeletonNavBar from "@/components/ui/Skeleton/NavBar/SkeletonNavBar";
+import SkeletonFooter from "@/components/SkeletonFooter";
+import SkeletonNavBar from "@/components/SkeletonNavBar";
 import clsx from "clsx";
 
 export default function Loading() {

@@ -1,6 +1,6 @@
 "use client";
 import clsx from "clsx";
-import ProductCard from "@/components/Product/ProductCard/ProductCard";
+import ProductCard from "@/components/ProductCard";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { calculateAverageRating } from "@/utils/utils";
 import { API_URL } from "@/utils/urls";

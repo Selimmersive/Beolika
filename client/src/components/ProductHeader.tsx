@@ -1,5 +1,5 @@
 "use client";
-import NavBar from "@/components/ui/NavBar/NavBar";
+import NavBar from "@/components/NavBar";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import clsx from "clsx";
 import Image from "next/image";

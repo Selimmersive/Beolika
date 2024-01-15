@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
-import Footer from "@/components/ui/Footer";
+import Footer from "@/components/Footer";
 import Loading from "./loading";
 import { LegalDto } from "@/utils/api/dto/legalDto";
 import { getLegalPageBySlug } from "@/utils/api/api";
-import Legal from "@/components/Legal/Legal";
+import Legal from "@/components/Legal";
 import { errorResponse } from "@/utils/utils";
 import { Metadata } from "next";
 

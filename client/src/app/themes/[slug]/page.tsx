@@ -5,10 +5,10 @@ import { ProductDetailsDto } from "@/utils/api/dto/productDetailsDto";
 import { ProductListsDto } from "@/utils/api/dto/productListsDto";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { FaqDto } from "@/utils/api/dto/faqDto";
-import ProductDetails from "@/components/Product/ProductDetails";
-import ProductHeader from "@/components/Product/ProductHeader";
-import Suggestion from "@/components/Product/Suggestion";
-import Footer from "@/components/ui/Footer";
+import ProductDetails from "@/components/ProductDetails";
+import ProductHeader from "@/components/ProductHeader";
+import Suggestion from "@/components/Suggestion";
+import Footer from "@/components/Footer";
 import Loading from "./loading";
 import { Metadata } from "next";
 

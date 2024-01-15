@@ -8,19 +8,19 @@ import React from "react";
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://beolika.com"),
+  metadataBase: new URL("https://shopithemes.beolika.com"),
   title: {
-    default: "Beolika",
-    template: `Beolika - %s`,
+    default: "Shopithemes",
+    template: `Shopithemes - %s`,
   },
   description: "Library of high-conversion, attractive and trendy themes",
   generator: 'Next.js',
-  applicationName: 'Beolika',
+  applicationName: 'Shopithemes',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'Next', 'Next 13', 'React', 'Typescript', 'Tailwindcss', 'JavaScript', 'Shopify', 'Themes', 'Templates', 'Theme', 'Template', 'Library', 'High-conversion', 'Trendy'],
-  authors: [{ name: 'Selimmersive', url: 'https://Selimmersive.com' }],
-  creator: 'Selimmersive',
-  publisher: 'Selimmersive',
+  authors: [{ name: 'Beolika', url: 'https://beolika.com' }],
+  creator: 'Beolika',
+  publisher: 'Beolika',
 };
 
 const darker = Darker_Grotesque({ weight: ["400", "500", "600", "700", "800", "900"], subsets: ["latin"], variable: "--font-darker" });
@@ -58,12 +58,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         <meta name="p:domain_verify" content="7d3e30a9cf3ab37e787f4a2bdf73b05a"/>
-        {/*   <DefaultSeo
-          {...NEXT_SEO_DEFAULT}
-          facebook={{ appId: '118645674436264' }}
-          themeColor="#111"
-          titleTemplate="Beolika"
-        /> */}
       </Head>
       <body className="min-w-screen bg-primary" suppressHydrationWarning={true}>
         <SnipCartCustom>

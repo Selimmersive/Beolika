@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import { getProductFaqs } from "@/utils/api/api";
 import { FaqDto } from "@/utils/api/dto/faqDto";
-import Footer from "@/components/ui/Footer";
-import NavBar from "@/components/ui/NavBar";
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 import clsx from "clsx";
-import FAQ from "@/components/ui/FAQ";
+import FAQ from "@/components/Faq";
 import Loading from "../loading";
 import { errorResponse } from "@/utils/utils";
 

@@ -9,7 +9,7 @@ export async function GET() {
     return {
       id: product.id.toString(),
       price: product.attributes.price,
-      url: `https://beolika.com/themes/${product.attributes.slug}`
+      url: `https://shopithemes.beolika.com/themes/${product.attributes.slug}`
     };
   });
   

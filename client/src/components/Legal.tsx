@@ -1,7 +1,7 @@
 import { LegalDto } from "@/utils/api/dto/legalDto";
 import clsx from "clsx";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import NavBar from "../ui/NavBar";
+import NavBar from "./NavBar";
 
 export default function Legal({ legal }: { legal: LegalDto }) {
   const { legals, title } = legal.attributes;

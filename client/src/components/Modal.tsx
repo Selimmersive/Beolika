@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Links from "../Links";
+import Links from "./Links";
 import { IoClose } from 'react-icons/io5';
 
 interface ModalProps {

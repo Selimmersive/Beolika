@@ -1,10 +1,10 @@
 "use client";
 import { HiOutlineMenuAlt4 , HiOutlineShoppingBag } from "react-icons/hi";
 import clsx from "clsx";
-import Links from "../Links";
+import Links from "./Links";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Modal from "../Modal";
+import Modal from "./Modal";
 
 export default function NavBar() {
   const [isModal, setIsModal] = useState(false);
@@ -25,7 +25,7 @@ export default function NavBar() {
     <nav className={clsx("py-6", "md:py-14", "lg:py-6")}>
       <div className={clsx("space-y-4", "md:space-y-6", "lg:hidden")}>
         <Link href="/">
-          <h3 className={clsx("font-glacialRegular text-4xl")}>Beolika</h3>
+          <h3 className={clsx("font-glacialRegular text-4xl")}>Shopithemes</h3>
         </Link>
         <div className="border-b"></div>
         <div className={clsx("flex w-full items-center justify-between")}>
@@ -41,7 +41,7 @@ export default function NavBar() {
       </div>
       <div className={clsx("hidden space-y-4", "lg:block")}>
         <Link href="/" className="flex items-center">
-          <h3 className={clsx("font-glacialRegular text-4xl")}>Beolika</h3>
+          <h3 className={clsx("font-glacialRegular text-4xl")}>Shopithemes</h3>
         </Link>
         <div className="border-b"></div>
         <div className={clsx("lg:flex lg:w-full lg:items-center lg:justify-end lg:gap-10")}>

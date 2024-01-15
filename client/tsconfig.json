@@ -28,7 +28,7 @@
     "paths": {
       "@/*": [
         "./public/*",
-        "./src/app/*",
+        "./src/*",
       ]
     },
     "incremental": true

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { dateFormat } from "@/utils/utils";
 import GetRatings from "@/utils/getRating";
-import ReviewsForm from "@/components/ui/Form";
+import ReviewsForm from "@/components/ReviewsForm";
 
 export default function Reviews({ data }: { data: ProductDto }) {
   const { reviews } = data.attributes;

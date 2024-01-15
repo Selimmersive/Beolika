@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import NavBar from "@/components/ui/NavBar";
+import NavBar from "@/components/NavBar";
 import clsx from "clsx";
 
 export default function Header() {

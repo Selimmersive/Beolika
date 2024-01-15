@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
-import Footer from "@/components/ui/Footer";
+import Footer from "@/components/Footer";
 import Loading from "./loading";
 import Collections from "@/components/Collections";
-import NavBar from "@/components/ui/NavBar";
+import NavBar from "@/components/NavBar";
 import { getAllProducts } from "@/utils/api/api";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { errorResponse } from "@/utils/utils";

@@ -1,6 +1,6 @@
-import Description from "@/components/Product/Description";
-import Faq from "@/components/ui/FAQ";
-import Reviews from "@/components/Product/Reviews";
+import Description from "@/components/Description";
+import Faq from "@/components/Faq";
+import Reviews from "@/components/Reviews";
 import { FaqDto } from "./api/dto/faqDto";
 import { ProductDetailsDto } from "./api/dto/productDetailsDto";
 import { ProductDto } from "./api/dto/productDto";

@@ -1,17 +1,17 @@
 import { getProductsByCategory } from "@/utils/api/api";
-import { errorResponse } from "./utils/utils";
+import { errorResponse } from "@/utils/utils";
 import { ProductDto } from "@/utils/api/dto/productDto";
 import { Suspense } from "react";
-import FeaturedCollections from "@/components/Home/FeaturedCollections";
+import FeaturedCollections from "@/components/FeaturedCollections";
 import Loading from "./loading";
-import Header from "@/components/Home/Header";
-import Footer from "@/components/ui/Footer";
-import About from "./components/Home/About";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import About from "@/components/About";
 
 export const metadata = {
-  title: "Beolika - Home",
+  title: "Shopithemes - Home",
   alternates: {
-    canonical: `https://beolika.com/`,
+    canonical: `https://shopithemes.beolika.com/`,
   }
 };
 export default async function Home() {
