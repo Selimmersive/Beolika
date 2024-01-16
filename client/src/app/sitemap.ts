@@ -13,17 +13,17 @@ export default async function sitemap() {
   });
 
   const themesUrl = 
-  products.map((theme) => {
+  products?.map((theme) => {
     return {
-      url: `${HOME_URL}/themes/${theme.attributes.slug}`,
+      url: `${HOME_URL}/themes/${theme?.attributes.slug}`,
       lastModified: new Date()
     };
   });
 
   const legalsUrls = 
-  legals.map((theme) => {
+  legals?.map((theme) => {
     return {
-      url: `${HOME_URL}/legal/${theme.attributes.slug}`,
+      url: `${HOME_URL}/legal/${theme?.attributes.slug}`,
       lastModified: new Date()
     };
   });

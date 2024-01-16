@@ -30,7 +30,7 @@ export default async function FaqPages() {
               <h3 className={clsx("text-5xl font-bold", "lg:text-8xl")}>Frequently Asked Questions</h3>
               <p className={clsx("py-2 text-lg", "md:text-xl", "lg:py-4 lg:text-[22px]")}>Some questions asked by our customers</p>
             </div>
-            <FAQ data={faq && faq} />
+            {faq && <FAQ data={faq} />}
           </div>
         </div>
         <Footer />
