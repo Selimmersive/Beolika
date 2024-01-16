@@ -1,11 +1,16 @@
 import { getAllLegals, getAllProducts } from "@/app/utils/api/api";
 import { ProductDto } from "@/app/utils/api/dto/productDto";
+import { errorResponse } from "./utils/utils";
 
 export default async function sitemap() {
-  const baseUrl = "https://shopithemes.beolika.com";
+  const baseUrl = "https://themify.vercel.app";
 
-  const products: ProductDto[] = await getAllProducts();
-  const legals: ProductDto[] = await getAllLegals();
+  const products: ProductDto[] = await getAllProducts().catch((err) => {
+    errorResponse(err);
+  });
+  const legals: ProductDto[] = await getAllLegals().catch((err) => {
+    errorResponse(err);
+  });
 
   const themesUrl = 
   products.map((theme) => {

@@ -6,7 +6,7 @@ export default function About() {
     <div>
       <div className="container">
         <p className={clsx("py-14 text-xl font-glacialRegular", "md:text-2xl", "xl:text-4xl xl:py-24")}>
-              I founded Shopithemes with a clear mission: to empower entrepreneurs to succeed online, even without advanced design or shop-building
+              I founded Themify with a clear mission: to empower entrepreneurs to succeed online, even without advanced design or shop-building
               skills. I understand that every moment counts, and that every project is unique. That{"'"}s why I{"'"}ve created a collection of
               themes designed to meet your specific needs.
         </p>

@@ -72,8 +72,6 @@ export const calculateAverageRating = (reviews: ReviewDto[]) => {
 export const errorResponse = (err: any) => {
   if(err.response && err.response.status) {
     return toast.error(renderOfError(err.response.status));
-  } else {
-    return toast.error(err.message);
   }
 };
 

@@ -4,8 +4,8 @@ import Loading from "./loading";
 import { LegalDto } from "@/app/utils/api/dto/legalDto";
 import { getLegalPageBySlug } from "@/app/utils/api/api";
 import Legal from "@/app/components/Legal";
-import { errorResponse } from "@/app/utils/utils";
 import { Metadata } from "next";
+import { errorResponse } from "@/app/utils/utils";
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
   const legal: LegalDto = await getLegalPageBySlug(params.slug).catch((err) => {

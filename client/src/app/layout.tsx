@@ -8,14 +8,14 @@ import React from "react";
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://shopithemes.beolika.com"),
+  metadataBase: new URL("https://themify.vercel.app"),
   title: {
-    default: "Shopithemes",
-    template: `Shopithemes - %s`,
+    default: "Themify",
+    template: `Themify - %s`,
   },
   description: "Library of high-conversion, attractive and trendy themes",
   generator: 'Next.js & Strapi',
-  applicationName: 'Shopithemes',
+  applicationName: 'Themify',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'Next', 'Next 13', 'React', 'Typescript', 'Tailwindcss', 'JavaScript', 'Shopify', 'Themes', 'Templates', 'Theme', 'Template', 'Library', 'High-conversion', 'Trendy'],
   authors: [{ name: 'Beolika', url: 'https://beolika.com' }],
@@ -57,7 +57,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <Head>
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
-        <meta name="p:domain_verify" content="7d3e30a9cf3ab37e787f4a2bdf73b05a"/>
       </Head>
       <body className="min-w-screen bg-primary" suppressHydrationWarning={true}>
         <SnipCartCustom>
@@ -68,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           async
           src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"
           id="snipcart"
-          data-api-key="MGJmYmI5ZTQtOGE3Ni00YTM1LTgzNTEtZWI0ZWMxMmM4OGZhNjM4MTQ1MTk2OTM4NDY2NzEy"
+          data-api-key="YzhhNzM3YmMtNDY4Ny00OGYxLTg3ZDYtNzIxMDI5ZmQwYmE5NjM4MTQ1MTk2OTM4NDY2NzEy"
           data-config-modal-style="side"></Script>
       </body>
     </html>

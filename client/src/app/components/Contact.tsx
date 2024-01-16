@@ -11,7 +11,7 @@ export default function Contact () {
           <h3 className={clsx("text-5xl font-bold", "lg:text-8xl")}>Contact</h3>
           <h4 className={clsx("text-2xl font-semibold", "text-3xl")}>We look forward to hearing from you.</h4>
           <p className={clsx("py-2 text-lg", "md:text-xl", "lg:py-4 lg:text-[22px]")}>
-              At Shopithemes, we are committed to providing exceptional customer service. We are here to guide you in your choice, answer your questions
+              At Themify, we are committed to providing exceptional customer service. We are here to guide you in your choice, answer your questions
               and offer personalized assistance at every stage of your shopping experience. Your satisfaction and happiness are our top priority.
           </p>
           <button

@@ -9,7 +9,7 @@ export default function Footer() {
           <div className={clsx("space-y-2", "lg:space-y-6")}>
             <h6 className={clsx("text-xl font-glacialBold", "sm:text-2xl", "lg:text-3xl")}>About</h6>
             <p className={clsx("text-xl", "lg:text-[22px]")}>
-              Shopithemes reflects our commitment to bringing you distinctive designs that will make you stand out on the web.
+              Themify reflects our commitment to bringing you distinctive designs that will make you stand out on the web.
             </p>
             <p className={clsx("text-xl", "lg:text-[22px]")}>
               <strong>Email : </strong>
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
         <div className="pb-2">
           <p className="mt-10 font-semiBold border-t-2 pt-3 text-center text-lg md:text-xl">
-            © 2023, Shopithemes made by{" "}
+            © 2023, Themify made by{" "}
             <a href="mailto:hello@beolika.com" className="hover:underline">
               Beolika
             </a>

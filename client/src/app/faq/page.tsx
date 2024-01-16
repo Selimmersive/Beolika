@@ -6,7 +6,7 @@ import NavBar from "@/app/components/NavBar";
 import clsx from "clsx";
 import FAQ from "@/app/components/Faq";
 import Loading from "../loading";
-import { errorResponse } from "@/app/utils/utils";
+import { errorResponse } from "../utils/utils";
 
 export const metadata = {
   title: "FAQ",
