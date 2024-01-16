@@ -5,17 +5,18 @@ import { errorResponse } from "@/app/utils/utils";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const res : ProductDto[] = await getAllProducts().catch((err) => {
-    errorResponse(err);
-  });
+  try {
+    const products: ProductDto[] = await getAllProducts();
 
-  const products = res.map((product) => {
-    return {
+    const formattedProducts = products.map((product) => ({
       id: product.id.toString(),
       price: product.attributes.price,
-      url: `${HOME_URL}/themes/${product.attributes.slug}`
-    };
-  });
-  
-  return NextResponse.json(products);
+      url: `${HOME_URL}/themes/${product.attributes.slug}`,
+    }));
+
+    return NextResponse.json(formattedProducts);
+  } catch (error) {
+    errorResponse(error);
+    return NextResponse.json([]); // Vous pouvez ajuster cela en fonction de vos besoins.
+  }
 }
