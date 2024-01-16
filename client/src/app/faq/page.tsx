@@ -5,7 +5,7 @@ import Footer from "@/app/components/Footer";
 import NavBar from "@/app/components/NavBar";
 import clsx from "clsx";
 import FAQ from "@/app/components/Faq";
-import Loading from "../loading";
+import Loading from "./loading";
 import { errorResponse } from "../utils/utils";
 
 export const metadata = {
@@ -30,7 +30,7 @@ export default async function FaqPages() {
               <h3 className={clsx("text-5xl font-bold", "lg:text-8xl")}>Frequently Asked Questions</h3>
               <p className={clsx("py-2 text-lg", "md:text-xl", "lg:py-4 lg:text-[22px]")}>Some questions asked by our customers</p>
             </div>
-            <FAQ data={faq} />
+            <FAQ data={faq && faq} />
           </div>
         </div>
         <Footer />

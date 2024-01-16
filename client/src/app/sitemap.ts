@@ -1,9 +1,9 @@
 import { getAllLegals, getAllProducts } from "@/app/utils/api/api";
 import { ProductDto } from "@/app/utils/api/dto/productDto";
 import { errorResponse } from "./utils/utils";
+import { HOME_URL } from "./utils/urls";
 
 export default async function sitemap() {
-  const baseUrl = "https://themify.vercel.app";
 
   const products: ProductDto[] = await getAllProducts().catch((err) => {
     errorResponse(err);
@@ -15,7 +15,7 @@ export default async function sitemap() {
   const themesUrl = 
   products.map((theme) => {
     return {
-      url: `${baseUrl}/themes/${theme.attributes.slug}`,
+      url: `${HOME_URL}/themes/${theme.attributes.slug}`,
       lastModified: new Date()
     };
   });
@@ -23,27 +23,27 @@ export default async function sitemap() {
   const legalsUrls = 
   legals.map((theme) => {
     return {
-      url: `${baseUrl}/legal/${theme.attributes.slug}`,
+      url: `${HOME_URL}/legal/${theme.attributes.slug}`,
       lastModified: new Date()
     };
   });
 
   return [
     {
-      url: baseUrl,
+      url: HOME_URL,
       lastModified: new Date()
     },
     {
-      url: `${baseUrl}/themes`,
+      url: `${HOME_URL}/themes`,
       lastModified: new Date()
     },
     ...themesUrl,
     {
-      url: `${baseUrl}/faq`,
+      url: `${HOME_URL}/faq`,
       lastModified: new Date()
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${HOME_URL}/contact`,
       lastModified: new Date()
     },
     ...legalsUrls

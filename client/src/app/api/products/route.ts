@@ -1,5 +1,6 @@
 import { getAllProducts } from "@/app/utils/api/api";
 import { ProductDto } from "@/app/utils/api/dto/productDto";
+import { HOME_URL } from "@/app/utils/urls";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -9,7 +10,7 @@ export async function GET() {
     return {
       id: product.id.toString(),
       price: product.attributes.price,
-      url: `https://themify.vercel.app/themes/${product.attributes.slug}`
+      url: `${HOME_URL}/themes/${product.attributes.slug}`
     };
   });
   
