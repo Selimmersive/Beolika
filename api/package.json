@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "production": "NODE_ENV=production strapi start"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.9.0",
@@ -15,6 +16,7 @@
     "@strapi/provider-upload-cloudinary": "^4.13.7",
     "@strapi/strapi": "4.9.0",
     "better-sqlite3": "8.0.1",
+    "strapi": "^3.6.11",
     "strapi-plugin-vercel-deploy": "^1.4.0"
   },
   "author": {
