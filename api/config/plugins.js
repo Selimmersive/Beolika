@@ -1,24 +1,26 @@
 module.exports = ({ env }) => ({
-  'strapi-neon-tech-db-branches': {
+  "vercel-deploy": {
     enabled: true,
     config: {
-      neonApiKey: "5bast42te1wx7ffdu34lm7bkoxg0gtso1ars25i2n2t6hjd53c87lqgbmz3rhkie", 
-      neonProjectName: "Themify",
-      neonRole: "beolika", 
-    }
+      deployHook: process.env.VERCEL_DEPLOY_PLUGIN_HOOK,
+      apiToken: process.env.VERCEL_DEPLOY_PLUGIN_API_TOKEN,
+      appFilter: process.env.VERCEL_DEPLOY_PLUGIN_APP_FILTER,
+      teamFilter: process.env.VERCEL_DEPLOY_PLUGIN_TEAM_FILTER,
+      roles: ["strapi-super-admin"],
+    },
   },
-    upload: {
-      config: {
-        provider: 'cloudinary',
-        providerOptions: {
-          cloud_name: env('CLOUDINARY_NAME'),
-          api_key: env('CLOUDINARY_KEY'),
-          api_secret: env('CLOUDINARY_SECRET'),
-        },
-        actionOptions: {
-          upload: {},
-          delete: {},
-        },
+  upload: {
+    config: {
+      provider: 'cloudinary',
+      providerOptions: {
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
+      },
+      actionOptions: {
+        upload: {},
+        delete: {},
       },
     },
-  });
+  },
+});
