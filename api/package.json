@@ -2,7 +2,7 @@
   "name": "api-themify",
   "private": true,
   "version": "0.1.0",
-  "description": "Library of high-conversion, attractive and trendy themes",
+  "description": "Library of high-conversion, attractive and trendy themes !!",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
