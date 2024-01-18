@@ -10,12 +10,17 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.9.0",
-    "@strapi/plugin-users-permissions": "4.9.0",
-    "@strapi/provider-upload-cloudinary": "^4.13.7",
-    "@strapi/strapi": "4.9.0",
-    "better-sqlite3": "8.0.1",
-    "strapi": "^3.6.11"
+    "@strapi/plugin-i18n": "4.17.1",
+    "@strapi/plugin-users-permissions": "4.17.1",
+    "@strapi/provider-upload-cloudinary": "^4.17.1",
+    "@strapi/strapi": "4.17.1",
+    "better-sqlite3": "9.3.0",
+    "pg": "^8.11.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "strapi": "^3.6.11",
+    "styled-components": "^5.3.11"
   },
   "author": {
     "name": "Beolika"
@@ -24,7 +29,7 @@
     "uuid": "98923edf-b8ec-4eb0-ac1d-4b79d74f1fbf"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
